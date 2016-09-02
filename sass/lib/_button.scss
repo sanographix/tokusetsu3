@@ -1,5 +1,5 @@
 // buttons
-.btn {
+@mixin btn {
     display: inline-block;
     text-align: center;
     padding: .6em 1.2em;
@@ -20,7 +20,7 @@
         border-color: $link;
     }
 }
-.btn-light {
+@mixin btn-light {
     border-color: $light;
     color: $base;
     &:hover {
@@ -29,7 +29,7 @@
         color: #fff;
     }
 }
-.btn-primary {
+@mixin btn-primary {
     background-color: $link;
     color: #fff;
     border-color: $link;
@@ -39,7 +39,7 @@
         border-color: $hover;
     }
 }
-.btn-large {
+@mixin btn-large {
     padding: .7em 2em;
     font-size: 120%;
     box-sizing: border-box;
