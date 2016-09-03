@@ -90,3 +90,35 @@
         margin-bottom: 2em;
     }
 }
+
+// tracklist
+.section-tracklist {
+    .section-content {
+        display: flex;
+        justify-content: center;
+    }
+}
+.tracklist {
+    display: table;
+    width: auto;
+    margin: 0;
+    li {
+        display: flex;
+        list-style: none;
+        margin-bottom: 2em;
+        .track-title {
+            display: block;
+        }
+    }
+}
+.track-number {
+    font-size: 1.5rem;
+    color: $link;
+    margin-right: .5em;
+}
+.track-title {
+    font-size: 1.5rem;
+}
+.track-meta {
+    color: $light;
+}
