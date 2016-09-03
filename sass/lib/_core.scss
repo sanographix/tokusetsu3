@@ -22,9 +22,9 @@
 .btn-fb {
     display: inline-block;
     border-radius: 50%;
-    width: 42px;
-    height: 42px;
     margin-left: 1em;
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,8 +32,12 @@
         margin-left: 0;
     }
     svg {
-        width: 24px;
-        height: 24px;
+        width: 18px;
+        height: 18px;
+    }
+    @media #{$mq-sm} {
+        width: 42px;
+        height: 42px;
     }
 }
 .btn-tw {
@@ -45,7 +49,12 @@
 .globalHeader-labelName {
     display: flex;
     align-items: center;
+    max-width: 50%;
 }
+.labelName-logoImg {
+    max-width: 100%;
+}
+
 // hero header
 .heroHeader {
     background-color: $bg;
@@ -244,6 +253,12 @@
 }
 
 // footer
+.section-footer {
+    margin-bottom: 1em;
+    @media #{$mq-sm} {
+        margin-bottom: 2em;
+    }
+}
 .footer-content {
     font-size: .75rem;
     text-align: center;
@@ -269,7 +284,6 @@
         margin-bottom: 0;
     }
 }
-
 .footer-theme {
     text-align: left;
     display: table;
@@ -283,7 +297,6 @@
         text-align: right;
     }
 }
-
 .footer-title {
     display: block;
     font-size: 1rem;
@@ -297,6 +310,10 @@
         font-size: 1rem;
     }
 }
+.install-button {
+}
 .footer-install-btn {
     @include btn;
+    border-color: $border;
+    white-space: nowrap;
 }
