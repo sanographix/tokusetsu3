@@ -1,13 +1,52 @@
 // Core (Main Style)
 
-// header
+// global header
+.globalHeader {
+    @media #{$mq-sm} {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+    }
+}
 .globalHeader-inner {
     display: flex;
     justify-content: space-between;
-    > div {
-
+    padding: .5em 0;
+}
+.globalHeader-shareBtns {
+    display: flex;
+}
+.btn-tw,
+.btn-fb {
+    display: inline-block;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    margin-left: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:first-child {
+        margin-left: 0;
+    }
+    svg {
+        width: 24px;
+        height: 24px;
     }
 }
+.btn-tw {
+    background-color: $btn-tw;
+}
+.btn-fb {
+    background-color: $btn-fb;
+}
+.globalHeader-labelName {
+    display: flex;
+    align-items: center;
+}
+// hero header
 .heroHeader {
     background-color: $bg;
 }
@@ -140,22 +179,27 @@
 }
 
 // youtube
+.section-youtube {
+    .section-content {
+        max-width: 700px;
+        margin: auto;
+    }
+}
 .video-wrap {
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 30px;
     height: 100%;
     overflow: hidden;
-}
-
-.video-wrap iframe,
-.video-wrap object,
-.video-wrap embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    iframe,
+    object,
+    embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 // credit
@@ -190,4 +234,69 @@
 .credit-title {
     font-size: 1.3rem;
     font-weight: bold;
+}
+
+// banner
+.section-banner {
+    .section-content {
+        text-align: center;
+    }
+}
+
+// footer
+.footer-content {
+    font-size: .75rem;
+    text-align: center;
+    a {
+        font-weight: bold;
+        text-decoration: none;
+        color: $base;
+    }
+    span {
+        line-height: 1.4;
+    }
+    .footer-copyright {
+        margin-bottom: 2em;
+    }
+    @media #{$mq-sm} {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.footer-copyright {
+    @media #{$mq-sm} {
+        text-align: left;
+        margin-bottom: 0;
+    }
+}
+
+.footer-theme {
+    text-align: left;
+    display: table;
+    margin: auto;
+    & > div {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    @media #{$mq-sm} {
+        margin: 0;
+        text-align: right;
+    }
+}
+
+.footer-title {
+    display: block;
+    font-size: 1rem;
+}
+.footer-theme-author {
+    padding-right: 1em;
+}
+.footer-theme-tokusetsu3 {
+    display: block;
+    a {
+        font-size: 1rem;
+    }
+}
+.footer-install-btn {
+    @include btn;
 }

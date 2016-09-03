@@ -37,6 +37,9 @@ h1,h2,h3,h4,h5,h6 {
     @media #{$mq-md} {
         margin: 4em auto;
     }
+    img {
+        max-width: 100%;
+    }
 }
 .section-header {
     text-align: center;
