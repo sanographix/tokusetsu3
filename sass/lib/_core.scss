@@ -16,6 +16,9 @@
     margin-right: auto;
     height: 70vw;
     max-width: 1800px;
+    position: relative;
+    display: flex;
+    align-items: center;
     @media #{$mq-sm} {
         height: 50vw;
     }
@@ -27,7 +30,6 @@
     }
     // ブラウザ幅が広すぎる場合、左右にグラデーションをかける
     @media (min-width: 1800px) {
-        position: relative;
         &:before {
             content: "";
             position: absolute;
@@ -47,11 +49,29 @@
             background: linear-gradient(to left, $bg, rgba(0,0,0,0));
         }
     }
+    // タイトル位置
+    &.is-position-top {
+        align-items: flex-start;
+        .header {
+            margin-top: 5%;
+        }
+    }
+    &.is-position-bottom {
+        align-items: flex-end;
+        .header {
+            margin-bottom: 5%;
+        }
+    }
 }
-
 .header {
     text-align: center;
-    padding: 3em;
+    width: 100%;
+    .header-logo {
+        max-width: 100%;
+    }
+    h1 {
+        margin: 0;
+    }
 }
 
 // intro
@@ -112,13 +132,48 @@
     }
 }
 .track-number {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: $link;
     margin-right: .5em;
 }
 .track-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
 }
 .track-meta {
     color: $light;
+}
+
+// credit
+
+.credit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    @media #{$mq-sm} {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    li {
+        list-style: none;
+        text-align: center;
+        margin-bottom: 2rem;
+        @media #{$mq-sm} {
+            width: 30%;
+        }
+    }
+}
+.credit-role,
+.credit-title,
+.credit-website {
+    display: block;
+}
+.credit-role {
+    color: $light;
+}
+.credit-title {
+    font-size: 1.3rem;
+    font-weight: bold;
 }
