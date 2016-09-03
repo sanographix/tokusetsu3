@@ -17,7 +17,7 @@ gulp.task('sass', function () {
         .pipe(sass().on('error', sass.logError)) // Keep running gulp even though occurred compile error
         .pipe(pleeease({
             autoprefixer: {
-                browsers: ['last 2 versions']
+                browsers: ['last 2 versions', 'Android 4.3']
             }
         }))
         .pipe(gulp.dest('build/css'))
