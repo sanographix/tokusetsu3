@@ -58,3 +58,34 @@
 .section-introduction {
     text-align: center;
 }
+
+// spec
+.spec-dl {
+    dt {
+        font-weight: bold;
+        position: relative;
+        margin-bottom: .5em;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            background-color: $border;
+            height: 1px;
+            display: block;
+        }
+    }
+    .spec-dl-label {
+        background-color: $bg;
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+        padding-right: 1em;
+    }
+    dd {
+        margin-left: 0;
+        margin-bottom: 2em;
+    }
+}
