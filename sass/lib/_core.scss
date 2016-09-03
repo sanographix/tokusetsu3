@@ -48,13 +48,13 @@
     &.is-position-top {
         align-items: flex-start;
         .header {
-            margin-top: 5%;
+            margin-top: 3%;
         }
     }
     &.is-position-bottom {
         align-items: flex-end;
         .header {
-            margin-bottom: 5%;
+            margin-bottom: 3%;
         }
     }
 }
