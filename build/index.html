@@ -1,9 +1,89 @@
 
 <!DOCTYPE html>
+<!--
+  Theme: Tokusetsu 3
+  by @sanographix
+  http://www.sanographix.net
+  (c) 2016 Showkaku Sano
+  Free to use under the MIT license.
+-->
 <html prefix="og: http://ogp.me/ns#">
 <head>
 
   <meta charset="utf-8">
+
+  <meta name="image:Header Image" content=""/>
+  <meta name="image:Circle Logo" content=""/>
+  <meta name="image:Jacket" content=""/>
+  <meta name="image:Title Logo" content=""/>
+  <meta name="image:Banner" content=""/>
+  <meta name="image:Introduction Heading Image" content="" />
+
+  <meta name="select:Theme Color" content="light" title="Light">
+  <meta name="select:Theme Color" content="dark" title="Dark">
+  <meta name="select:Theme Mode" content="theme-music" title="Music mode">
+  <meta name="select:Theme Mode" content="theme-book" title="Book mode">
+
+  <meta name="text:01 l Circle Logo Width" content="" />
+  <meta name="text:01 l Header Title Width" content="" />
+
+  <meta name="text:02 l Introduction" content="" />
+  <meta name="text:02 l Introduction Heading" content="Introduction" />
+
+  <meta name="text:03 l Circle Name" content="" />
+  <meta name="text:03 l Circle URL" content="" />
+  <meta name="text:03 l Spec" content="" />
+  <meta name="text:03 l Release Date" content="" />
+  <meta name="text:03 l Event Booth Number" content="" />
+  <meta name="text:03 l Price" content="" />
+
+  <meta name="text:03 l Store01 Name" content="" />
+  <meta name="text:03 l Store01 URL" content="" />
+  <meta name="text:03 l Store02 Name" content="" />
+  <meta name="text:03 l Store02 URL" content="" />
+
+  <meta name="text:04 l Youtube Embed Code" content="" />
+  <meta name="text:04 l Soundcloud Embed Code" content="" />
+  <meta name="text:04 l Nicovideo Embed Code" content="" />
+
+  <meta name="text:05 l Track01 Title" content="" />
+  <meta name="text:05 l Track01 Description" content="" />
+  <meta name="text:05 l Track02 Title" content="" />
+  <meta name="text:05 l Track02 Description" content="" />
+  <meta name="text:05 l Track03 Title" content="" />
+  <meta name="text:05 l Track03 Description" content="" />
+  <meta name="text:05 l Track04 Title" content="" />
+  <meta name="text:05 l Track04 Description" content="" />
+  <meta name="text:05 l Track05 Title" content="" />
+  <meta name="text:05 l Track05 Description" content="" />
+  <meta name="text:05 l Track06 Title" content="" />
+  <meta name="text:05 l Track06 Description" content="" />
+  <meta name="text:05 l Track07 Title" content="" />
+  <meta name="text:05 l Track07 Description" content="" />
+  <meta name="text:05 l Track08 Title" content="" />
+  <meta name="text:05 l Track08 Description" content="" />
+
+  <meta name="text:06 l Staff01 Name" content="" />
+  <meta name="text:06 l Staff01 Role" content="" />
+  <meta name="text:06 l Staff01 URL" content="" />
+  <meta name="text:06 l Staff02 Name" content="" />
+  <meta name="text:06 l Staff02 Role" content="" />
+  <meta name="text:06 l Staff02 URL" content="" />
+  <meta name="text:06 l Staff03 Name" content="" />
+  <meta name="text:06 l Staff03 Role" content="" />
+  <meta name="text:06 l Staff03 URL" content="" />
+  <meta name="text:06 l Staff04 Name" content="" />
+  <meta name="text:06 l Staff04 Role" content="" />
+  <meta name="text:06 l Staff04 URL" content="" />
+  <meta name="text:06 l Staff05 Name" content="" />
+  <meta name="text:06 l Staff05 Role" content="" />
+  <meta name="text:06 l Staff05 URL" content="" />
+  <meta name="text:06 l Staff06 Name" content="" />
+  <meta name="text:06 l Staff06 Role" content="" />
+  <meta name="text:06 l Staff06 URL" content="" />
+
+  <meta name="text:07 l Footer Text" content="" />
+
   <title>Toppage - Example Site</title>
 
   <meta name="viewport" content="width=device-width">
@@ -19,7 +99,12 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="">
 
+<!--
   <link rel="stylesheet" href="css/style.css" />
+-->
+<link rel="stylesheet" href="https://dl.dropboxusercontent.com/u/282961/tokusetsu3/style.css
+" />
+
   <link rel="shortcut icon" href="images/favicon.ico" />
   <link rel="canonical" href="http://example.com/" />
 
@@ -32,7 +117,7 @@
   <div class="l-container">
     <div class="globalHeader-inner">
       <div class="globalHeader-labelName">
-        <img class="labelName-logoImg" src="images/circle-logo.png" alt="TOKUSETSU RECOREDS" style="width: 116px;">
+        <img class="labelName-logoImg" src="{image:Circle Logo}" alt="{text:03 l Circle Name}" style="width: {text:01 l Circle Logo Width}px;">
       </div>
       <div class="globalHeader-shareBtns">
         <a href="https://twitter.com/share?text=&url=" class="btn-tw" target="_blank">
@@ -47,11 +132,11 @@
 </div>
 
 <div class="heroHeader">
-  <div class="heroHeader-inner is-position-bottom" style="background-image: url('images/hero.jpg');">
+  <div class="heroHeader-inner is-position-bottom" style="background-image: url('{image:Header Image}');">
     <header class="header">
       <div class="l-container">
         <h1>
-          <img class="header-logo" src="images/title.png" alt="ANTHEMS 3" style="width: 1000px;">
+          <img class="header-logo" src="{image:Title Logo}" alt="{title}" style="width: {text:01 l Header Title Width}px;">
         </h1>
       </div>
     </header>
