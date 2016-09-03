@@ -1,9 +1,12 @@
 // Core (Main Style)
 
 // header
-.globalHeader {
+.globalHeader-inner {
     display: flex;
     justify-content: space-between;
+    > div {
+
+    }
 }
 .heroHeader {
     background-color: $bg;
@@ -14,22 +17,14 @@
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
-    height: 70vw;
+    height: 55vw;
     max-width: 1800px;
     position: relative;
     display: flex;
     align-items: center;
-    @media #{$mq-sm} {
-        height: 50vw;
-    }
-    @media #{$mq-md} {
-        height: 40vw;
-    }
-    @media #{$mq-lg} {
-        height: 40vw;
-    }
     // ブラウザ幅が広すぎる場合、左右にグラデーションをかける
     @media (min-width: 1800px) {
+        height: 1000px;
         &:before {
             content: "";
             position: absolute;
