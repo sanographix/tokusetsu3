@@ -85,20 +85,27 @@
 
   <meta name="text:07 l Footer Text" content="" />
 
-  <title>Toppage - Example Site</title>
+  <title>{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}{block:IndexPage} - {text:03 l Circle Name}{/block:IndexPage}</title>
 
   <meta name="viewport" content="width=device-width">
-
-  <meta property="og:title" content="Toppage - Example Site" />
-  <meta property="og:description" content="Awesome site" />
+  {block:Description}
+    <meta name="description" content="{MetaDescription}" />
+    <meta name="og:description" content="{MetaDescription}" />
+  {/block:Description}
+  <meta property="og:title" content="{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}{block:IndexPage} - {text:03 l Circle Name}{/block:IndexPage}" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://example.com/" />
-  <meta property="og:image" content="http://example.com/images/og-image.jpg" />
-  <meta property="og:site_name" content="Example Site" />
-
-  <meta property="fb:app_id" content="" />
+  <meta property="og:image" content="{image:Header Image}" />
+  <meta property="og:site_name" content="{Title}" />
+  {block:IndexPage}
+    <link rel="canonical" href="{BlogURL}"/>
+    <meta property="og:url" content="{BlogURL}" />
+  {/block:IndexPage}
+  {block:PermalinkPage}
+    <link rel="canonical" href="{Permalink}"/>
+    <meta property="og:url" content="{Permalink}" />
+  {/block:PermalinkPage}
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="">
+  <meta name="twitter:image:src" content="{image:Header Image}">
 
 <!--
   <link rel="stylesheet" href="css/style.css" />
@@ -107,7 +114,7 @@
 " />
 
   <link rel="shortcut icon" href="images/favicon.ico" />
-  <link rel="canonical" href="http://example.com/" />
+  <link rel="canonical" href="" />
 
 
 </head>
