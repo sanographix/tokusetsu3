@@ -286,10 +286,11 @@
 .footer-content {
     font-size: .75rem;
     text-align: center;
+    color: $light;
     a {
         font-weight: bold;
         text-decoration: none;
-        color: $base;
+        color: $light;
     }
     span {
         line-height: 1.4;

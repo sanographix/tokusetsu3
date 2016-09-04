@@ -133,7 +133,9 @@
   <div class="l-container">
     <div class="globalHeader-inner">
       <div class="globalHeader-labelName">
-        <img class="labelName-logoImg" src="{image:Circle Logo}" alt="{text:03 l Circle Name}" style="width: {text:01 l Circle Logo Width}px;">
+        <a href="{text:03 l Circle URL}">
+          <img class="labelName-logoImg" src="{image:Circle Logo}" alt="{text:03 l Circle Name}" style="width: {text:01 l Circle Logo Width}px;">
+        </a>
       </div>
       <div class="globalHeader-shareBtns">
         <a href="https://twitter.com/share?text=&url=" class="btn-tw" target="_blank">
@@ -266,83 +268,94 @@
     </header>
     <div class="section-content">
       <ol class="tracklist">
+          {block:If05lTrack01Title}
           <li class="track-container">
             <div class="track-number">01</div>
             <div class="track-content">
-              <span class="track-title">{text:Track01 Title}</span>
-              <span class="track-meta">{text:Track01 Description}</span>
+              <span class="track-title">{text:05 l Track01 Title}</span>
+              <span class="track-meta">{text:05 l Track01 Description}</span>
             </div>
           </li>
+          {/block:If05lTrack01Title}
+          {block:If05lTrack02Title}
           <li class="track-container">
             <div class="track-number">02</div>
             <div class="track-content">
-              <span class="track-title">{text:Track02 Title}</span>
-              <span class="track-meta">{text:Track02 Description}</span>
+              <span class="track-title">{text:05 l Track02 Title}</span>
+              <span class="track-meta">{text:05 l Track02 Description}</span>
             </div>
           </li>
+          {/block:If05lTrack02Title}
+          {block:If05lTrack03Title}
           <li class="track-container">
             <div class="track-number">03</div>
             <div class="track-content">
-              <span class="track-title">{text:Track01 Title}</span>
-              <span class="track-meta">{text:Track01 Description}</span>
+              <span class="track-title">{text:05 l Track03 Title}</span>
+              <span class="track-meta">{text:05 l Track03 Description}</span>
             </div>
           </li>
+          {/block:If05lTrack03Title}
+          {block:If05lTrack04Title}
           <li class="track-container">
             <div class="track-number">04</div>
             <div class="track-content">
-              <span class="track-title">{text:Track01 Title}</span>
-              <span class="track-meta">{text:Track01 Description}</span>
+              <span class="track-title">{text:05 l Track04 Title}</span>
+              <span class="track-meta">{text:05 l Track04 Description}</span>
             </div>
           </li>
+          {/block:If05lTrack04Title}
+          {block:If05lTrack05Title}
           <li class="track-container">
             <div class="track-number">05</div>
             <div class="track-content">
-              <span class="track-title">{text:Track01 Title}</span>
-              <span class="track-meta">{text:Track01 Description}</span>
+              <span class="track-title">{text:05 l Track05 Title}</span>
+              <span class="track-meta">{text:05 l Track05 Description}</span>
             </div>
           </li>
+          {/block:If05lTrack05Title}
+          {block:If05lTrack06Title}
           <li class="track-container">
             <div class="track-number">06</div>
             <div class="track-content">
-              <span class="track-title">{text:Track01 Title}</span>
-              <span class="track-meta">{text:Track01 Description}</span>
+              <span class="track-title">{text:05 l Track06 Title}</span>
+              <span class="track-meta">{text:05 l Track06 Description}</span>
             </div>
           </li>
+          {/block:If05lTrack06Title}
+          {block:If05lTrack07Title}
           <li class="track-container">
             <div class="track-number">07</div>
             <div class="track-content">
-              <span class="track-title">{text:Track01 Title}</span>
-              <span class="track-meta">{text:Track01 Description}</span>
+              <span class="track-title">{text:05 l Track07 Title}</span>
+              <span class="track-meta">{text:05 l Track07 Description}</span>
             </div>
           </li>
+          {/block:If05lTrack07Title}
+          {block:If05lTrack08Title}
           <li class="track-container">
             <div class="track-number">08</div>
             <div class="track-content">
-              <span class="track-title">{text:Track01 Title}</span>
-              <span class="track-meta">{text:Track01 Description}</span>
+              <span class="track-title">{text:05 l Track08 Title}</span>
+              <span class="track-meta">{text:05 l Track08 Description}</span>
             </div>
           </li>
-          <li class="track-container">
-            <div class="track-number">09</div>
-            <div class="track-content">
-              <span class="track-title">{text:Track01 Title}</span>
-              <span class="track-meta">{text:Track01 Description}</span>
-            </div>
-          </li>
+          {/block:If05lTrack08Title}
       </ol>
     </div>
   </div>
 </section>
 
+{block:If04lYoutubeEmbedCode}
 <section id="youtube" class="l-section section-youtube">
   <div class="l-container">
     <div class="section-content">
       <div id="youtube-iframe" class="video-wrap">
-        <iframe width="560" height="315" src="http://www.youtube.com/embed/{text:Youtube Embed Code}" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="http://www.youtube.com/embed/{text:04 l Youtube Embed Code}" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </div>
 </section>
+{/block:If04lYoutubeEmbedCode}
 
 <section class="l-section section-credit">
   <div class="l-container">
@@ -351,60 +364,74 @@
     </header>
     <div class="section-content">
       <ul class="credit">
+        {block:If06lStaff01Name}
         <li>
-          <span class="credit-role">{text:Staff01 Role}</span>
-          <span class="credit-title">{text:Staff01 Name}</span>
+          <span class="credit-role">{text:06 l Staff01 Role}</span>
+          <span class="credit-title">{text:06 l Staff01 Name}</span>
           <span class="credit-website">
-            <a href="{text:Staff01 URL}" target="_blank">Website</a>
+            <a href="{text:06 l Staff01 URL}" target="_blank">Website</a>
           </span>
         </li>
+        {/block:If06lStaff01Name}
+        {block:If06lStaff02Name}
         <li>
-          <span class="credit-role">{text:Staff01 Role}</span>
-          <span class="credit-title">{text:Staff01 Name}</span>
+          <span class="credit-role">{text:06 l Staff02 Role}</span>
+          <span class="credit-title">{text:06 l Staff02 Name}</span>
           <span class="credit-website">
-            <a href="{text:Staff01 URL}" target="_blank">Website</a>
+            <a href="{text:06 l Staff02 URL}" target="_blank">Website</a>
           </span>
         </li>
+        {/block:If06lStaff02Name}
+        {block:If06lStaff03Name}
         <li>
-          <span class="credit-role">{text:Staff01 Role}</span>
-          <span class="credit-title">{text:Staff01 Name}</span>
+          <span class="credit-role">{text:06 l Staff03 Role}</span>
+          <span class="credit-title">{text:06 l Staff03 Name}</span>
           <span class="credit-website">
-            <a href="{text:Staff01 URL}" target="_blank">Website</a>
+            <a href="{text:06 l Staff03 URL}" target="_blank">Website</a>
           </span>
         </li>
+        {/block:If06lStaff03Name}
+        {block:If06lStaff04Name}
         <li>
-          <span class="credit-role">{text:Staff01 Role}</span>
-          <span class="credit-title">{text:Staff01 Name}</span>
+          <span class="credit-role">{text:06 l Staff04 Role}</span>
+          <span class="credit-title">{text:06 l Staff04 Name}</span>
           <span class="credit-website">
-            <a href="{text:Staff01 URL}" target="_blank">Website</a>
+            <a href="{text:06 l Staff04 URL}" target="_blank">Website</a>
           </span>
         </li>
+        {/block:If06lStaff04Name}
+        {block:If06lStaff05Name}
         <li>
-          <span class="credit-role">{text:Staff01 Role}</span>
-          <span class="credit-title">{text:Staff01 Name}</span>
+          <span class="credit-role">{text:06 l Staff05 Role}</span>
+          <span class="credit-title">{text:06 l Staff05 Name}</span>
           <span class="credit-website">
-            <a href="{text:Staff01 URL}" target="_blank">Website</a>
+            <a href="{text:06 l Staff05 URL}" target="_blank">Website</a>
           </span>
         </li>
+        {/block:If06lStaff05Name}
+        {block:If06lStaff06Name}
         <li>
-          <span class="credit-role">{text:Staff01 Role}</span>
-          <span class="credit-title">{text:Staff01 Name}</span>
+          <span class="credit-role">{text:06 l Staff06 Role}</span>
+          <span class="credit-title">{text:06 l Staff06 Name}</span>
           <span class="credit-website">
-            <a href="{text:Staff01 URL}" target="_blank">Website</a>
+            <a href="{text:06 l Staff06 URL}" target="_blank">Website</a>
           </span>
         </li>
+        {/block:If06lStaff06Name}
       </ul>
     </div>
   </div>
 </section>
 
+{block:IfBannerImage}
 <section class="l-section section-banner">
   <div class="l-container">
     <div class="section-content">
-      <img src="images/banner.jpg">
+      <img src="{image:Banner}">
     </div>
   </div>
 </section>
+{block:IfBannerImage}
 
 <!-- Note: Do not delete the following section.
 ここから先のセクションは消去しないでください -->
@@ -413,14 +440,14 @@
     <div class="footer-content">
       <div class="footer-copyright">
         <span class="footer-title">
-          <a href="/">
-            ANTHEMS 3
+          <a href="{BlogURL}">
+            {title}
           </a>
         </span>
         <span class="footer-copyright">
           ©{CopyrightYears}
           <a href="{circleurl}">
-            {CIRCLE}
+            {text:03 l Circle Name}
           </a>
         </span>
       </div>
