@@ -174,6 +174,9 @@
     dd {
         margin-left: 0;
         margin-bottom: 2em;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -202,13 +205,19 @@
     }
 }
 .track-number {
-    font-size: 1.3rem;
     color: $link;
     margin-right: .5em;
+    font-size: 1.1rem;
+    @media #{$mq-sm} {
+        font-size: 1.3rem;
+    }
 }
 .track-title {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: bold;
+    @media #{$mq-sm} {
+        font-size: 1.3rem;
+    }
 }
 .track-meta {
     color: $light;
@@ -268,9 +277,12 @@
     color: $light;
 }
 .credit-title {
-    font-size: 1.3rem;
     font-weight: bold;
-    margin: .3em 0;
+    margin: .4em 0;
+    font-size: 1.1rem;
+    @media #{$mq-sm} {
+        font-size: 1.3rem;
+    }
 }
 .credit-website-link {
     @include btn;
