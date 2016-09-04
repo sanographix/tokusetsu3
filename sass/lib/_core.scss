@@ -123,14 +123,28 @@
 }
 
 // spec
-.jacket-noimage {
-    height: 40vw;
-    width: 100%;
-    letter-spacing: .3em;
-    border: 1px solid $border;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.section-spec {
+    .jacket-image {
+        max-width: 300px;
+        display: block;
+        margin: 0 auto 1.5em;
+        @media (max-width: 319px) {
+            max-width: 100%;
+        }
+        @media #{$mq-sm} {
+            max-width: 100%;
+        }
+    }
+    .jacket-noimage {
+        height: 40vw;
+        width: 100%;
+        letter-spacing: .3em;
+        border: 1px solid $border;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 .spec-dl {
     margin: 0;
