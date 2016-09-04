@@ -29,7 +29,12 @@ pageDescription = "Awesome site";
     <header class="header">
       <div class="l-container">
         <h1>
-          <img class="header-logo" src="{image:Title Logo}" alt="{title}" style="width: {text:01 l Header Title Width}px;">
+          {block:IfTitleLogoImage}
+            <img class="header-logo" src="{image:Title Logo}" alt="{title}" style="width: {text:01 l Header Title Width}px;">
+          {/block:IfTitleLogoImage}
+          {block:IfNotTitleLogoImage}
+            {title}
+          {/block:IfNotTitleLogoImage}
         </h1>
       </div>
     </header>
@@ -38,20 +43,33 @@ pageDescription = "Awesome site";
 
 <section class="l-section section-introduction">
   <div class="l-container">
-    <header class="section-header">
-      <h2>あれから2年──待望の3rdアルバム遂に完成!!</h2>
-    </header>
+    {block:If02lIntroductionHeading}
+      <header class="section-header">
+        <h2>
+          {block:IfIntroductionHeadingImageImage}
+            <img class="introduction-heading-image" src="{image:Introduction Heading Image}" alt="{text:02 l Introduction Heading}" style="width: {text:02 l Introduction Heading Image Width}px;">
+          {/block:IfIntroductionHeadingImageImage}
+          {block:IfNotIntroductionHeadingImageImage}
+            {text:02 l Introduction Heading}
+          {/block:IfNotIntroductionHeadingImageImage}
+        </h2>
+      </header>
+    {/block:If02lIntroductionHeading}
     <div class="section-content">
-      <p>トクセツレコードが2年の沈黙を破り、待望の3rdフルアルバムをリリース！ いま最もパワフルなアーティストが集い、盤石の布陣でお届けする最強の1枚が完成!! 絶対に見逃すな!!!</p>
+      <p>
+        {text:02 l Introduction}
+      </p>
     </div>
   </div>
 </section>
 
-<section class="l-section section-soundcloud">
-  <div class="l-container">
-    <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F{text:Soundcloud Embed Code}&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=true"></iframe>
-  </div>
-</section>
+{block:If04lSoundcloudEmbedCode}
+  <section class="l-section section-soundcloud">
+    <div class="l-container">
+      <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F{text:04 l Soundcloud Embed Code}&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=true"></iframe>
+    </div>
+  </section>
+{/block:If04lSoundcloudEmbedCode}
 
 <section class="l-section section-spec">
   <div class="l-container">
@@ -62,40 +80,49 @@ pageDescription = "Awesome site";
       <div class="l-span7">
         <dl class="spec-dl">
           <dt><span class="spec-dl-label">TITLE</span></dt>
-          <dd>ANTHEM 3</dd>
+          <dd>{title}</dd>
 
           <dt><span class="spec-dl-label">CIRCLE</span></dt>
-          <dd>トクセツレコーズ</dd>
+          <dd><a href="{text:03 l Circle URL}">{text:03 l Circle Name}</a></dd>
 
           <dt><span class="spec-dl-label">SPECIFICATION</span></dt>
-          <dd>プレスCD + ブックレット8P</dd>
+          <dd>{text:03 l Spec}</dd>
 
           <dt><span class="spec-dl-label">RELEASE DATE</span></dt>
-          <dd>201x/xx/xx</dd>
+          <dd>{text:03 l Release Date}</dd>
 
           <dt><span class="spec-dl-label">BOOTH</span></dt>
-          <dd>201x年W3　第一展示場　X-00</dd>
+          <dd>{text:03 l Booth Number}</dd>
 
           <dt><span class="spec-dl-label">PRICE</span></dt>
-          <dd>1,000円</dd>
-
+          <dd>{text:03 l Price}</dd>
+          {block:If03lStore01Name}
           <dt><span class="spec-dl-label">STORE</span></dt>
-          <dd>
-            <ul>
-              <li>
-                <a href="{text:Store01 URL}" target="_blank">{text:Store01 Name}</a>
-              </li>
-              <li>
-                <a href="{text:Store01 URL}" target="_blank">{text:Store01 Name}</a>
-              </li>
-              <li>
-                <a href="{text:Store01 URL}" target="_blank">{text:Store01 Name}</a>
-              </li>
-              <li>
-                <a href="{text:Store01 URL}" target="_blank">{text:Store01 Name}</a>
-              </li>
-            </ul>
-          </dd>
+            <dd>
+              <ul>
+                <li>
+                  <a href="{text:Store01 URL}" target="_blank">{text:03 l Store01 Name}</a>
+                </li>
+                {/block:If03lStore01Name}
+                {block:If03lStore02Name}
+                <li>
+                  <a href="{text:Store02 URL}" target="_blank">{text:03 l Store02 Name}</a>
+                </li>
+                {/block:If03lStore02Name}
+                {block:If03lStore03Name}
+                <li>
+                  <a href="{text:Store03 URL}" target="_blank">{text:03 l Store03 Name}</a>
+                </li>
+                {/block:If03lStore03Name}
+                {block:If03lStore04Name}
+                <li>
+                  <a href="{text:Store04 URL}" target="_blank">{text:03 l Store04 Name}</a>
+                </li>
+                {/block:If03lStore04Name}
+                {block:If03lStore01Name}
+              </ul>
+            </dd>
+          {/block:If03lStore01Name}
         </dl>
       </div>
     </div>
