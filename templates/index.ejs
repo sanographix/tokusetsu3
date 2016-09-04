@@ -72,7 +72,14 @@ pageId = "index";
   <div class="l-container">
     <div class="l-row">
       <div class="l-span5">
-        <img src="images/jacket.jpg">
+        {block:IfJacketImage}
+          <img src="{image:Jacket}" alt="{Title}">
+        {/block:IfJacketImage}
+        {block:IfNotJacketImage}
+          <div class="jacket-noimage">
+            NOW PRINTING
+          </div>
+        {/block:IfNotJacketImage}
       </div>
       <div class="l-span7">
         <dl class="spec-dl">

@@ -17,6 +17,7 @@
   <meta name="image:Title Logo" content=""/>
   <meta name="image:Banner" content=""/>
   <meta name="image:Introduction Heading Image" content="" />
+  <meta name="image:Og Image" content=""/>
 
   <meta name="select:Theme Color" content="light" title="Light">
   <meta name="select:Theme Color" content="dark" title="Dark">
@@ -93,7 +94,7 @@
   {/block:Description}
   <meta property="og:title" content="{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}{block:IndexPage} - {text:03 l Circle Name}{/block:IndexPage}" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="{image:Header Image}" />
+
   <meta property="og:site_name" content="{Title}" />
   {block:IndexPage}
     <link rel="canonical" href="{BlogURL}"/>
@@ -104,7 +105,14 @@
     <meta property="og:url" content="{Permalink}" />
   {/block:PermalinkPage}
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image:src" content="{image:Header Image}">
+  {block:IfOgImageImage}
+    <meta name="twitter:image:src" content="{image:Og Image}">
+    <meta property="og:image" content="{image:Og Image}" />
+  {block:IfOgImageImage}
+  {block:IfNotOgImageImage}
+    <meta name="twitter:image:src" content="{image:Header Image}">
+    <meta property="og:image" content="{image:Header Image}" />
+  {block:IfNotOgImageImage}
 
 <!--
   <link rel="stylesheet" href="css/style.css" />

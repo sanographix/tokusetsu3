@@ -123,6 +123,15 @@
 }
 
 // spec
+.jacket-noimage {
+    height: 40vw;
+    width: 100%;
+    letter-spacing: .3em;
+    border: 1px solid $border;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .spec-dl {
     margin: 0;
     dt {
