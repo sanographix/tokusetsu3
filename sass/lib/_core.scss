@@ -192,7 +192,10 @@
     li {
         display: flex;
         list-style: none;
-        margin-bottom: 2em;
+        margin-bottom: 1.5rem;
+        @media #{$mq-sm} {
+            margin-bottom: 2em;
+        }
         .track-title {
             display: block;
         }
@@ -236,7 +239,6 @@
 }
 
 // credit
-
 .credit {
     display: flex;
     flex-direction: column;
@@ -250,9 +252,10 @@
     li {
         list-style: none;
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         @media #{$mq-sm} {
             width: 30%;
+            margin-bottom: 2rem;
         }
     }
 }
@@ -267,6 +270,12 @@
 .credit-title {
     font-size: 1.3rem;
     font-weight: bold;
+    margin: .3em 0;
+}
+.credit-website-link {
+    @include btn;
+    font-size: .7rem;
+    padding: .2em .7em;
 }
 
 // banner
