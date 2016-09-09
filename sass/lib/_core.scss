@@ -123,7 +123,6 @@
 }
 
 // spec
-
 .section-spec {
     .jacket-image {
         max-width: 300px;
@@ -178,6 +177,18 @@
             margin-bottom: 0;
         }
     }
+}
+// buy-button
+.section-buy {
+    background-color: $bg-light;
+    padding: 1em 0 1.5em;
+}
+.spec-buy-container {
+    text-align: center;
+}
+.spec-buy-button {
+    @include btn;
+    @include btn-large;
 }
 
 // tracklist
@@ -355,8 +366,6 @@
     a {
         font-size: 1rem;
     }
-}
-.install-button {
 }
 .footer-install-btn {
     @include btn;

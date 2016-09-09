@@ -40,8 +40,14 @@
     }
 }
 @mixin btn-large {
-    padding: .7em 2em;
-    font-size: 120%;
+    padding: .7em;
+    font-size: 110%;
     box-sizing: border-box;
     border-width: 2px;
+    width: 100%;
+    margin: .2em 0;
+    @media #{$mq-sm} {
+        padding: .7em 2em;
+        width: auto;
+    }
 }

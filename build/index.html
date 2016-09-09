@@ -233,17 +233,17 @@
             <dd>
               <ul>
                 <li>
-                  <a href="{text:Store01 URL}" target="_blank">{text:03 l Store01 Name}</a>
+                  <a href="{text:Store01 URL}">{text:03 l Store01 Name}</a>
                 </li>
                 {/block:If03lStore01Name}
                 {block:If03lStore02Name}
                 <li>
-                  <a href="{text:Store02 URL}" target="_blank">{text:03 l Store02 Name}</a>
+                  <a href="{text:Store02 URL}">{text:03 l Store02 Name}</a>
                 </li>
                 {/block:If03lStore02Name}
                 {block:If03lStore03Name}
                 <li>
-                  <a href="{text:Store03 URL}" target="_blank">{text:03 l Store03 Name}</a>
+                  <a href="{text:Store03 URL}">{text:03 l Store03 Name}</a>
                 </li>
                 {/block:If03lStore03Name}
                 {block:If03lStore01Name}
@@ -257,25 +257,26 @@
 </section>
 
 {block:If03lStore01Name}
-<section class="l-section section-tracklist">
+<section class="l-section section-buy">
   <div class="l-container">
     <header class="section-header">
-      <h2>BUY</h2>
+      <h2>AVAILABLE NOW</h2>
     </header>
-    <div class="section-content">
-      <a href="{text:03 l Store01 URL}" target="_blank">{text:03 l Store01 Name}</a>
+    <div class="spec-buy-container">
+      <a href="{text:03 l Store01 URL}" class="spec-buy-button">{text:03 l Store01 Name}</a>
       {/block:If03lStore01Name}
       {block:If03lStore02Name}
-      <a href="{text:03 l Store02 URL}" target="_blank">{text:03 l Store02 Name}</a>
+      <a href="{text:03 l Store02 URL}" class="spec-buy-button">{text:03 l Store02 Name}</a>
       {/block:If03lStore02Name}
       {block:If03lStore03Name}
-      <a href="{text:03 l Store03 URL}" target="_blank">{text:03 l Store03 Name}</a>
+      <a href="{text:03 l Store03 URL}" class="spec-buy-button">{text:03 l Store03 Name}</a>
       {block:If03lStore03Name}
     {block:If03lStore01Name}
     </div>
   </div>
 </section>
 {/block:If03lStore01Name}
+
 
 <section class="l-section section-tracklist">
   <div class="l-container">
