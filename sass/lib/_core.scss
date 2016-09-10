@@ -2,7 +2,9 @@
 
 // global header
 .globalHeader {
+    background-color: $bg;
     @media #{$mq-sm} {
+        background-color: transparent;
         position: absolute;
         top: 0;
         left: 0;
