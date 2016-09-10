@@ -3,7 +3,11 @@ pageId = "index";
 %>
 <% include _header %>
 
-<div class="globalHeader">
+<div class="globalHeader
+{block:If01lEnableHeaderShadow}
+  is-enable-globalHeader-shadow
+{/block:If01lEnableHeaderShadow}
+">
   <div class="l-container">
     <div class="globalHeader-inner">
       <div class="globalHeader-labelName">

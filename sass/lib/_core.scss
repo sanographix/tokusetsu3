@@ -9,6 +9,11 @@
         width: 100%;
         z-index: 2;
     }
+    &.is-enable-globalHeader-shadow {
+        @media #{$mq-sm} {
+            background: linear-gradient(to bottom, $bg 0%, rgba(0,0,0,.5) 50%, rgba(0,0,0,0) 100%);
+        }
+    }
 }
 .globalHeader-inner {
     display: flex;
