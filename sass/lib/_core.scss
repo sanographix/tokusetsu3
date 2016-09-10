@@ -125,6 +125,12 @@
 // intro
 .section-introduction {
     text-align: center;
+    .section-content {
+        text-align: left;
+        @media #{$mq-sm} {
+            text-align: center;
+        }
+    }
 }
 
 // spec
@@ -260,6 +266,17 @@
         left: 0;
         width: 100%;
         height: 100%;
+    }
+}
+
+// Additional Content
+.section-additionalContent {
+    text-align: center;
+    .section-content {
+        text-align: left;
+        @media #{$mq-sm} {
+            text-align: center;
+        }
     }
 }
 
