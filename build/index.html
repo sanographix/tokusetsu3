@@ -12,7 +12,7 @@
 
   <meta charset="utf-8">
 
-
+  
   <meta name="image:Background Image" content=""/>
   <meta name="image:Header Image" content=""/>
   <meta name="image:Circle Logo" content=""/>
@@ -118,7 +118,7 @@
     <meta property="og:image" content="{image:Header Image}" />
   {block:IfNotOgImageImage}
 
-
+  
 <!--
   <link rel="stylesheet" href="css/style-{select:ThemeColor}.css" />
 -->
@@ -296,21 +296,21 @@
 </section>
 {/block:If03lStore01Name}
 
-<section class="l-section section-tracklist">
-  <div class="l-container">
-    <header class="section-header">
-      <h2>TRACKLIST</h2>
-    </header>
-    <div class="section-content">
-      <ol class="tracklist">
-          {block:If05lTrack01Title}
-          <li class="track-container">
-            <div class="track-number">01</div>
-            <div class="track-content">
-              <span class="track-title">{text:05 l Track01 Title}</span>
-              <span class="track-meta">{text:05 l Track01 Description}</span>
-            </div>
-          </li>
+{block:If05lTrack01Title}
+  <section class="l-section section-tracklist">
+    <div class="l-container">
+      <header class="section-header">
+        <h2>TRACKLIST</h2>
+      </header>
+      <div class="section-content">
+        <ol class="tracklist">
+            <li class="track-container">
+              <div class="track-number">01</div>
+              <div class="track-content">
+                <span class="track-title">{text:05 l Track01 Title}</span>
+                <span class="track-meta">{text:05 l Track01 Description}</span>
+              </div>
+            </li>
           {/block:If05lTrack01Title}
           {block:If05lTrack02Title}
           <li class="track-container">
@@ -375,10 +375,12 @@
             </div>
           </li>
           {/block:If05lTrack08Title}
-      </ol>
+          {block:If05lTrack01Title}
+        </ol>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+{/block:If05lTrack01Title}
 
 {block:If04lYoutubeEmbedCode}
 <section id="youtube" class="l-section section-youtube">
@@ -403,20 +405,20 @@
 {/block:IfFooterAdditionalContent}
 
 {block:If07lStaff01Name}
-<section class="l-section section-credit">
-  <div class="l-container">
-    <header class="section-header">
-      <h2>CREDIT</h2>
-    </header>
-    <div class="section-content">
-      <ul class="credit">
-        <li>
-          <span class="credit-role">{text:07 l Staff01 Role}</span>
-          <span class="credit-title">{text:07 l Staff01 Name}</span>
-          <span class="credit-website">
-            <a href="{text:07 l Staff01 URL}" class="credit-website-link">Website</a>
-          </span>
-        </li>
+  <section class="l-section section-credit">
+    <div class="l-container">
+      <header class="section-header">
+        <h2>CREDIT</h2>
+      </header>
+      <div class="section-content">
+        <ul class="credit">
+          <li>
+            <span class="credit-role">{text:07 l Staff01 Role}</span>
+            <span class="credit-title">{text:07 l Staff01 Name}</span>
+            <span class="credit-website">
+              <a href="{text:07 l Staff01 URL}" class="credit-website-link">Website</a>
+            </span>
+          </li>
         {/block:If07lStaff01Name}
         {block:If07lStaff02Name}
         <li>
@@ -523,3 +525,4 @@
 
 </body>
 </html>
+
