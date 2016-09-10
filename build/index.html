@@ -12,6 +12,8 @@
 
   <meta charset="utf-8">
 
+  
+  <meta name="image:Background Image" content=""/>
   <meta name="image:Header Image" content=""/>
   <meta name="image:Circle Logo" content=""/>
   <meta name="image:Jacket" content=""/>
@@ -115,18 +117,30 @@
     <meta property="og:image" content="{image:Header Image}" />
   {block:IfNotOgImageImage}
 
+  
 <!--
   <link rel="stylesheet" href="css/style-{select:ThemeColor}.css" />
 -->
 <link rel="stylesheet" href="https://dl.dropboxusercontent.com/u/282961/tokusetsu3/style-{select:Theme Color}.css
 " />
 
-  <link rel="shortcut icon" href="images/favicon.ico" />
-  <link rel="canonical" href="" />
-
+  <link rel="shortcut icon" href="{Favicon}">
 
 </head>
-<body class="page-index">
+<body class="page-index"
+{block:IfBackgroundImageImage}
+  style="background-image: url('{image:Background Image}');"
+{/block:IfBackgroundImageImage}
+>
+
+<style>
+{CustomCSS}
+
+  a {
+      color: {color:Accent};
+  }
+
+</style>
 
 
 <div class="globalHeader">
@@ -467,6 +481,9 @@
             {text:03 l Circle Name}
           </a>
         </span>
+        {block:If07lFooterText}
+          <p class="footer-text">{text:07 l Footer Text}</p>
+        {/block:If07lFooterText}
       </div>
       <div class="footer-theme">
         <div class="footer-theme-author">

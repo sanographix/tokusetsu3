@@ -327,15 +327,14 @@
     span {
         line-height: 1.4;
     }
-    .footer-copyright {
-        margin-bottom: 2em;
-    }
     @media #{$mq-sm} {
         display: flex;
         justify-content: space-between;
     }
 }
 .footer-copyright {
+    margin-bottom: 2em;
+    align-items: center;
     @media #{$mq-sm} {
         text-align: left;
         margin-bottom: 0;
@@ -343,10 +342,10 @@
 }
 .footer-theme {
     text-align: left;
-    display: table;
+    display: flex;
     margin: auto;
+    align-items: center;
     & > div {
-        display: table-cell;
         vertical-align: middle;
     }
     @media #{$mq-sm} {
@@ -360,6 +359,12 @@
 }
 .footer-theme-author {
     padding-right: 1em;
+    @media #{$mq-sm} {
+        min-width: 250px;
+    }
+}
+.footer-text {
+    margin-bottom: 0;
 }
 .footer-theme-tokusetsu3 {
     display: block;

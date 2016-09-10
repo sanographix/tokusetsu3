@@ -11,6 +11,8 @@
 
   <meta charset="utf-8">
 
+  <%# テーマオプション類 %>
+  <meta name="image:Background Image" content=""/>
   <meta name="image:Header Image" content=""/>
   <meta name="image:Circle Logo" content=""/>
   <meta name="image:Jacket" content=""/>
@@ -114,15 +116,27 @@
     <meta property="og:image" content="{image:Header Image}" />
   {block:IfNotOgImageImage}
 
+  <%# TODO あとで差し替える %>
 <!--
   <link rel="stylesheet" href="css/style-{select:ThemeColor}.css" />
 -->
 <link rel="stylesheet" href="https://dl.dropboxusercontent.com/u/282961/tokusetsu3/style-{select:Theme Color}.css
 " />
 
-  <link rel="shortcut icon" href="images/favicon.ico" />
-  <link rel="canonical" href="" />
-
+  <link rel="shortcut icon" href="{Favicon}">
 
 </head>
-<body class="page-<%= pageId %>">
+<body class="page-<%= pageId %>"
+{block:IfBackgroundImageImage}
+  style="background-image: url('{image:Background Image}');"
+{/block:IfBackgroundImageImage}
+>
+
+<style>
+{CustomCSS}
+
+  a {
+      color: {color:Accent};
+  }
+
+</style>
