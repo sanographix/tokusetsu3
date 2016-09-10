@@ -34,7 +34,7 @@
     .btn-tw,
     .btn-fb {
         @media #{$mq-sm} {
-            border: 2px solid $bg;
+            border: 1px solid #fff; //あえてダークテーマでも白
             box-shadow: 0 4px 10px rgba(0,0,0,.4);
         }
     }
