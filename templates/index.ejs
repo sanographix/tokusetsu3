@@ -49,12 +49,12 @@ pageId = "index";
     {block:If02lIntroductionHeading}
       <header class="section-header">
         <h2>
-          {block:IfIntroductionHeadingImageImage}
-            <img class="introduction-heading-image" src="{image:Introduction Heading Image}" alt="{text:02 l Introduction Heading}" style="width: {text:02 l Introduction Heading Image Width}px;">
-          {/block:IfIntroductionHeadingImageImage}
-          {block:IfNotIntroductionHeadingImageImage}
+          {block:If02lIntroductionHeadingImageImage}
+            <img class="introduction-heading-image" src="{image:02 l Introduction Heading Image}" alt="{text:02 l Introduction Heading}" style="width: {text:02 l Introduction Heading Image Width}px;">
+          {/block:If02lIntroductionHeadingImageImage}
+          {block:IfNot02lIntroductionHeadingImageImage}
             {text:02 l Introduction Heading}
-          {/block:IfNotIntroductionHeadingImageImage}
+          {/block:IfNot02lIntroductionHeadingImageImage}
         </h2>
       </header>
     {/block:If02lIntroductionHeading}
@@ -253,15 +253,25 @@ pageId = "index";
 </section>
 {/block:If04lYoutubeEmbedCode}
 
-{block:IfFooterAdditionalContent}
-<section id="youtube" class="l-section section-youtube">
+{block:If07lFooterAdditionalContent}
+<section id="youtube" class="l-section section-additionalContent">
   <div class="l-container">
+    {block:If07lFooterAdditionalHeading}
+      <header class="section-header">
+        <h2>{text:07 l Footer Additional Heading}</h2>
+      </header>
+    {/block:If07lFooterAdditionalHeading}
     <div class="section-content">
-      <img src="{image:Footer Additional Image}" alt="{Title}" class="jacket-image">
+      {block:If07lFooterAdditionalText}
+        <p class="additionalContent-text">{text:07 l Footer Additional Text}</p>
+      {/block:If07lFooterAdditionalText}
+      {block:If07lFooterAdditionalImage}
+        <img src="{image:Footer Additional Image}" class="additionalContent-image">
+      {block:If07lFooterAdditionalImage}
     </div>
   </div>
 </section>
-{/block:IfFooterAdditionalContent}
+{/block:If07lFooterAdditionalContent}
 
 {block:If07lStaff01Name}
   <section class="l-section section-credit">

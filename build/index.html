@@ -19,17 +19,21 @@
   <meta name="image:Jacket" content=""/>
   <meta name="image:Title Logo" content=""/>
   <meta name="image:Banner" content=""/>
-  <meta name="image:Introduction Heading Image" content="" />
   <meta name="image:Og Image" content=""/>
+
+  <meta name="image:02 l Introduction Heading Image" content="" />
+  <meta name="image:06 l Footer Additional Image" content="" />
 
   <meta name="select:Theme Color" content="light" title="Light">
   <meta name="select:Theme Color" content="dark" title="Dark">
   <meta name="select:Theme Mode" content="theme-music" title="Music mode">
   <meta name="select:Theme Mode" content="theme-book" title="Book mode">
 
+  <meta name="if:01 l Enable Header Shadow" content="0"/>
+  <meta name="if:06 l Footer Additional Content" content="0"/>
+
   <meta name="text:01 l Circle Logo Width" content="" />
   <meta name="text:01 l Header Title Width" content="" />
-  <meta name="if: 01 l Enable Header Shadow" content="0"/>
 
   <meta name="text:02 l Introduction" content="" />
   <meta name="text:02 l Introduction Heading" content="Introduction" />
@@ -67,6 +71,9 @@
   <meta name="text:05 l Track07 Description" content="" />
   <meta name="text:05 l Track08 Title" content="" />
   <meta name="text:05 l Track08 Description" content="" />
+
+  <meta name="text:06 l Footer Additional Heading" content="" />
+  <meta name="text:06 l Footer Additional Text" content="" />
 
   <meta name="text:07 l Staff01 Name" content="" />
   <meta name="text:07 l Staff01 Role" content="" />
@@ -190,12 +197,12 @@
     {block:If02lIntroductionHeading}
       <header class="section-header">
         <h2>
-          {block:IfIntroductionHeadingImageImage}
-            <img class="introduction-heading-image" src="{image:Introduction Heading Image}" alt="{text:02 l Introduction Heading}" style="width: {text:02 l Introduction Heading Image Width}px;">
-          {/block:IfIntroductionHeadingImageImage}
-          {block:IfNotIntroductionHeadingImageImage}
+          {block:If02lIntroductionHeadingImageImage}
+            <img class="introduction-heading-image" src="{image:02 l Introduction Heading Image}" alt="{text:02 l Introduction Heading}" style="width: {text:02 l Introduction Heading Image Width}px;">
+          {/block:If02lIntroductionHeadingImageImage}
+          {block:IfNot02lIntroductionHeadingImageImage}
             {text:02 l Introduction Heading}
-          {/block:IfNotIntroductionHeadingImageImage}
+          {/block:IfNot02lIntroductionHeadingImageImage}
         </h2>
       </header>
     {/block:If02lIntroductionHeading}
@@ -394,15 +401,25 @@
 </section>
 {/block:If04lYoutubeEmbedCode}
 
-{block:IfFooterAdditionalContent}
-<section id="youtube" class="l-section section-youtube">
+{block:If07lFooterAdditionalContent}
+<section id="youtube" class="l-section section-additionalContent">
   <div class="l-container">
+    {block:If07lFooterAdditionalHeading}
+      <header class="section-header">
+        <h2>{text:07 l Footer Additional Heading}</h2>
+      </header>
+    {/block:If07lFooterAdditionalHeading}
     <div class="section-content">
-      <img src="{image:Footer Additional Image}" alt="{Title}" class="jacket-image">
+      {block:If07lFooterAdditionalText}
+        <p class="additionalContent-text">{text:07 l Footer Additional Text}</p>
+      {/block:If07lFooterAdditionalText}
+      {block:If07lFooterAdditionalImage}
+        <img src="{image:Footer Additional Image}" class="additionalContent-image">
+      {block:If07lFooterAdditionalImage}
     </div>
   </div>
 </section>
-{/block:IfFooterAdditionalContent}
+{/block:If07lFooterAdditionalContent}
 
 {block:If07lStaff01Name}
   <section class="l-section section-credit">
