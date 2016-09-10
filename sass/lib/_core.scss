@@ -31,6 +31,13 @@
 }
 .globalHeader-shareBtns {
     display: flex;
+    .btn-tw,
+    .btn-fb {
+        @media #{$mq-sm} {
+            border: 2px solid $bg;
+            box-shadow: 0 4px 10px rgba(0,0,0,.4);
+        }
+    }
 }
 .btn-tw,
 .btn-fb {
@@ -42,10 +49,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @media #{$mq-sm} {
-        border: 2px solid $bg;
-        box-shadow: 0 4px 10px rgba(0,0,0,.4);
-    }
     &:first-child {
         margin-left: 0;
     }
@@ -392,6 +395,17 @@
 .section-banner {
     .section-content {
         text-align: center;
+    }
+}
+
+// footerのシェアボタン
+.footer-shareBtns {
+    display: flex;
+    justify-content: center;
+    .btn-tw,
+    .btn-fb {
+        width: 50px;
+        height: 50px;
     }
 }
 

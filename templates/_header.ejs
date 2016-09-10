@@ -110,7 +110,7 @@
 
   <meta name="text:08 l Footer Text" content="" />
 
-  <title>{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}{block:IndexPage} - {text:03 l Circle Name}{/block:IndexPage}</title>
+  <title>{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}{block:IndexPage}{block:If03lCircleName} - {text:03 l Circle Name}{/block:If03lCircleName}{/block:IndexPage}</title>
 
   <meta name="viewport" content="width=device-width">
   {block:Description}
