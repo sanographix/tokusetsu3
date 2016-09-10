@@ -189,6 +189,29 @@
         }
     }
 }
+
+// Book Mode
+.bookSample-container {
+    @media #{$mq-sm} {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+.bookSample-content {
+    text-align: center;
+    @media #{$mq-sm} {
+        width: 48%;
+    }
+    @media #{$mq-md} {
+        width: 31%;
+    }
+    .bookSample-image {
+        max-width: 100%;
+    }
+}
+
+
 // buy-button
 .section-buy {
     background-color: $bg-light;
