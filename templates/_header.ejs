@@ -12,6 +12,9 @@
   <meta charset="utf-8">
 
   <%# テーマオプション類 %>
+  <meta name="font:Title" content="Helvetica Neue"/>
+  <meta name="font:Body" content="Helvetica Neue"/>
+
   <meta name="image:Background Image" content=""/>
   <meta name="image:Header Image" content=""/>
   <meta name="image:Circle Logo" content=""/>
@@ -33,6 +36,7 @@
   <meta name="if:06 l Footer Additional Content" content="0"/>
 
   <%# ブックモード %>
+  <meta name="text:Book Mode l Book Sample Heading" content="SAMPLE" />
   <meta name="image:Book Mode l Sample Image 01" content=""/>
   <meta name="image:Book Mode l Sample Image 02" content=""/>
   <meta name="image:Book Mode l Sample Image 03" content=""/>
@@ -153,6 +157,14 @@
 
 <style>
 {CustomCSS}
+
+  body {
+    font-family: {font:Body};
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    font-family: {font:Title};
+  }
 
   a,
   .track-number {
