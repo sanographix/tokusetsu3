@@ -23,6 +23,8 @@
   <meta name="image:02 l Introduction Heading Image" content="" />
   <meta name="image:06 l Footer Additional Image" content="" />
 
+  <meta name="color:Accent" content="#A77DC2"/>
+
   <meta name="select:Theme Color" content="light" title="Light">
   <meta name="select:Theme Color" content="dark" title="Dark">
   <meta name="select:Theme Mode" content="theme-music" title="Music mode">
@@ -143,8 +145,17 @@
 <style>
 {CustomCSS}
 
-  a {
+  a,
+  .track-number {
       color: {color:Accent};
+  }
+
+  .btn {
+      color: {color:Accent};
+      border-color: {color:Accent};
+  }
+  .btn:hover {
+    background-color: {color:Accent};
   }
 
 </style>

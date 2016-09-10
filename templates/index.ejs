@@ -141,13 +141,13 @@ pageId = "index";
       <h2>AVAILABLE NOW</h2>
     </header>
     <div class="spec-buy-container">
-      <a href="{text:03 l Store01 URL}" class="spec-buy-button">{text:03 l Store01 Name}</a>
+      <a href="{text:03 l Store01 URL}" class="spec-buy-button btn">{text:03 l Store01 Name}</a>
       {/block:If03lStore01Name}
       {block:If03lStore02Name}
-      <a href="{text:03 l Store02 URL}" class="spec-buy-button">{text:03 l Store02 Name}</a>
+      <a href="{text:03 l Store02 URL}" class="spec-buy-button btn">{text:03 l Store02 Name}</a>
       {/block:If03lStore02Name}
       {block:If03lStore03Name}
-      <a href="{text:03 l Store03 URL}" class="spec-buy-button">{text:03 l Store03 Name}</a>
+      <a href="{text:03 l Store03 URL}" class="spec-buy-button btn">{text:03 l Store03 Name}</a>
       {block:If03lStore03Name}
     {block:If03lStore01Name}
     </div>
@@ -265,13 +265,15 @@ pageId = "index";
       {block:If06lFooterAdditionalText}
         <p class="additionalContent-text">{text:06 l Footer Additional Text}</p>
       {/block:If06lFooterAdditionalText}
-      {block:If06lFooterAdditionalImage}
-        <img src="{image:Footer Additional Image}" class="additionalContent-image">
-      {block:If06lFooterAdditionalImage}
+      {block:If06lFooterAdditionalImageImage}
+        <div class="additionalContent-image-wrapper">
+          <img src="{image:06 l Footer Additional Image}" class="additionalContent-image">
+        </div>
+      {block:If06lFooterAdditionalImageImage}
     </div>
   </div>
 </section>
-{/block:If07lFooterAdditionalContent}
+{/block:If06lFooterAdditionalContent}
 
 {block:If07lStaff01Name}
   <section class="l-section section-credit">
@@ -285,7 +287,7 @@ pageId = "index";
             <span class="credit-role">{text:07 l Staff01 Role}</span>
             <span class="credit-title">{text:07 l Staff01 Name}</span>
             <span class="credit-website">
-              <a href="{text:07 l Staff01 URL}" class="credit-website-link">Website</a>
+              <a href="{text:07 l Staff01 URL}" class="credit-website-link btn">Website</a>
             </span>
           </li>
         {/block:If07lStaff01Name}
@@ -294,7 +296,7 @@ pageId = "index";
           <span class="credit-role">{text:07 l Staff02 Role}</span>
           <span class="credit-title">{text:07 l Staff02 Name}</span>
           <span class="credit-website">
-            <a href="{text:07 l Staff02 URL}" class="credit-website-link">Website</a>
+            <a href="{text:07 l Staff02 URL}" class="credit-website-link btn">Website</a>
           </span>
         </li>
         {/block:If07lStaff02Name}
@@ -303,7 +305,7 @@ pageId = "index";
           <span class="credit-role">{text:07 l Staff03 Role}</span>
           <span class="credit-title">{text:07 l Staff03 Name}</span>
           <span class="credit-website">
-            <a href="{text:07 l Staff03 URL}" class="credit-website-link">Website</a>
+            <a href="{text:07 l Staff03 URL}" class="credit-website-link btn">Website</a>
           </span>
         </li>
         {/block:If07lStaff03Name}
@@ -312,7 +314,7 @@ pageId = "index";
           <span class="credit-role">{text:07 l Staff04 Role}</span>
           <span class="credit-title">{text:07 l Staff04 Name}</span>
           <span class="credit-website">
-            <a href="{text:07 l Staff04 URL}" class="credit-website-link">Website</a>
+            <a href="{text:07 l Staff04 URL}" class="credit-website-link btn">Website</a>
           </span>
         </li>
         {/block:If07lStaff04Name}
@@ -321,7 +323,7 @@ pageId = "index";
           <span class="credit-role">{text:07 l Staff05 Role}</span>
           <span class="credit-title">{text:07 l Staff05 Name}</span>
           <span class="credit-website">
-            <a href="{text:07 l Staff05 URL}" class="credit-website-link">Website</a>
+            <a href="{text:07 l Staff05 URL}" class="credit-website-link btn">Website</a>
           </span>
         </li>
         {/block:If07lStaff05Name}
@@ -330,7 +332,7 @@ pageId = "index";
           <span class="credit-role">{text:07 l Staff06 Role}</span>
           <span class="credit-title">{text:07 l Staff06 Name}</span>
           <span class="credit-website">
-            <a href="{text:07 l Staff06 URL}" class="credit-website-link">Website</a>
+            <a href="{text:07 l Staff06 URL}" class="credit-website-link btn">Website</a>
           </span>
         </li>
         {/block:If07lStaff06Name}

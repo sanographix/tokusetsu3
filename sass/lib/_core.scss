@@ -279,6 +279,10 @@
         }
     }
 }
+.additionalContent-image-wrapper {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
 
 // credit
 .credit {
@@ -398,4 +402,8 @@
     @include btn;
     border-color: $border;
     white-space: nowrap;
+    &:hover {
+        text-decoration: none !important;
+        background-color: $border;
+    }
 }
