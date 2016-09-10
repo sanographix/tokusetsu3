@@ -12,7 +12,7 @@
 
   <meta charset="utf-8">
 
-  
+
   <meta name="image:Background Image" content=""/>
   <meta name="image:Header Image" content=""/>
   <meta name="image:Circle Logo" content=""/>
@@ -68,26 +68,26 @@
   <meta name="text:05 l Track08 Title" content="" />
   <meta name="text:05 l Track08 Description" content="" />
 
-  <meta name="text:06 l Staff01 Name" content="" />
-  <meta name="text:06 l Staff01 Role" content="" />
-  <meta name="text:06 l Staff01 URL" content="" />
-  <meta name="text:06 l Staff02 Name" content="" />
-  <meta name="text:06 l Staff02 Role" content="" />
-  <meta name="text:06 l Staff02 URL" content="" />
-  <meta name="text:06 l Staff03 Name" content="" />
-  <meta name="text:06 l Staff03 Role" content="" />
-  <meta name="text:06 l Staff03 URL" content="" />
-  <meta name="text:06 l Staff04 Name" content="" />
-  <meta name="text:06 l Staff04 Role" content="" />
-  <meta name="text:06 l Staff04 URL" content="" />
-  <meta name="text:06 l Staff05 Name" content="" />
-  <meta name="text:06 l Staff05 Role" content="" />
-  <meta name="text:06 l Staff05 URL" content="" />
-  <meta name="text:06 l Staff06 Name" content="" />
-  <meta name="text:06 l Staff06 Role" content="" />
-  <meta name="text:06 l Staff06 URL" content="" />
+  <meta name="text:07 l Staff01 Name" content="" />
+  <meta name="text:07 l Staff01 Role" content="" />
+  <meta name="text:07 l Staff01 URL" content="" />
+  <meta name="text:07 l Staff02 Name" content="" />
+  <meta name="text:07 l Staff02 Role" content="" />
+  <meta name="text:07 l Staff02 URL" content="" />
+  <meta name="text:07 l Staff03 Name" content="" />
+  <meta name="text:07 l Staff03 Role" content="" />
+  <meta name="text:07 l Staff03 URL" content="" />
+  <meta name="text:07 l Staff04 Name" content="" />
+  <meta name="text:07 l Staff04 Role" content="" />
+  <meta name="text:07 l Staff04 URL" content="" />
+  <meta name="text:07 l Staff05 Name" content="" />
+  <meta name="text:07 l Staff05 Role" content="" />
+  <meta name="text:07 l Staff05 URL" content="" />
+  <meta name="text:07 l Staff06 Name" content="" />
+  <meta name="text:07 l Staff06 Role" content="" />
+  <meta name="text:07 l Staff06 URL" content="" />
 
-  <meta name="text:07 l Footer Text" content="" />
+  <meta name="text:08 l Footer Text" content="" />
 
   <title>{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}{block:IndexPage} - {text:03 l Circle Name}{/block:IndexPage}</title>
 
@@ -118,7 +118,7 @@
     <meta property="og:image" content="{image:Header Image}" />
   {block:IfNotOgImageImage}
 
-  
+
 <!--
   <link rel="stylesheet" href="css/style-{select:ThemeColor}.css" />
 -->
@@ -296,7 +296,6 @@
 </section>
 {/block:If03lStore01Name}
 
-
 <section class="l-section section-tracklist">
   <div class="l-container">
     <header class="section-header">
@@ -403,6 +402,7 @@
 </section>
 {/block:IfFooterAdditionalContent}
 
+{block:If07lStaff01Name}
 <section class="l-section section-credit">
   <div class="l-container">
     <header class="section-header">
@@ -410,64 +410,65 @@
     </header>
     <div class="section-content">
       <ul class="credit">
-        {block:If06lStaff01Name}
         <li>
-          <span class="credit-role">{text:06 l Staff01 Role}</span>
-          <span class="credit-title">{text:06 l Staff01 Name}</span>
+          <span class="credit-role">{text:07 l Staff01 Role}</span>
+          <span class="credit-title">{text:07 l Staff01 Name}</span>
           <span class="credit-website">
-            <a href="{text:06 l Staff01 URL}" class="credit-website-link">Website</a>
+            <a href="{text:07 l Staff01 URL}" class="credit-website-link">Website</a>
           </span>
         </li>
-        {/block:If06lStaff01Name}
-        {block:If06lStaff02Name}
+        {/block:If07lStaff01Name}
+        {block:If07lStaff02Name}
         <li>
-          <span class="credit-role">{text:06 l Staff02 Role}</span>
-          <span class="credit-title">{text:06 l Staff02 Name}</span>
+          <span class="credit-role">{text:07 l Staff02 Role}</span>
+          <span class="credit-title">{text:07 l Staff02 Name}</span>
           <span class="credit-website">
-            <a href="{text:06 l Staff02 URL}" class="credit-website-link">Website</a>
+            <a href="{text:07 l Staff02 URL}" class="credit-website-link">Website</a>
           </span>
         </li>
-        {/block:If06lStaff02Name}
-        {block:If06lStaff03Name}
+        {/block:If07lStaff02Name}
+        {block:If07lStaff03Name}
         <li>
-          <span class="credit-role">{text:06 l Staff03 Role}</span>
-          <span class="credit-title">{text:06 l Staff03 Name}</span>
+          <span class="credit-role">{text:07 l Staff03 Role}</span>
+          <span class="credit-title">{text:07 l Staff03 Name}</span>
           <span class="credit-website">
-            <a href="{text:06 l Staff03 URL}" class="credit-website-link">Website</a>
+            <a href="{text:07 l Staff03 URL}" class="credit-website-link">Website</a>
           </span>
         </li>
-        {/block:If06lStaff03Name}
-        {block:If06lStaff04Name}
+        {/block:If07lStaff03Name}
+        {block:If07lStaff04Name}
         <li>
-          <span class="credit-role">{text:06 l Staff04 Role}</span>
-          <span class="credit-title">{text:06 l Staff04 Name}</span>
+          <span class="credit-role">{text:07 l Staff04 Role}</span>
+          <span class="credit-title">{text:07 l Staff04 Name}</span>
           <span class="credit-website">
-            <a href="{text:06 l Staff04 URL}" class="credit-website-link">Website</a>
+            <a href="{text:07 l Staff04 URL}" class="credit-website-link">Website</a>
           </span>
         </li>
-        {/block:If06lStaff04Name}
-        {block:If06lStaff05Name}
+        {/block:If07lStaff04Name}
+        {block:If07lStaff05Name}
         <li>
-          <span class="credit-role">{text:06 l Staff05 Role}</span>
-          <span class="credit-title">{text:06 l Staff05 Name}</span>
+          <span class="credit-role">{text:07 l Staff05 Role}</span>
+          <span class="credit-title">{text:07 l Staff05 Name}</span>
           <span class="credit-website">
-            <a href="{text:06 l Staff05 URL}" class="credit-website-link">Website</a>
+            <a href="{text:07 l Staff05 URL}" class="credit-website-link">Website</a>
           </span>
         </li>
-        {/block:If06lStaff05Name}
-        {block:If06lStaff06Name}
+        {/block:If07lStaff05Name}
+        {block:If07lStaff06Name}
         <li>
-          <span class="credit-role">{text:06 l Staff06 Role}</span>
-          <span class="credit-title">{text:06 l Staff06 Name}</span>
+          <span class="credit-role">{text:07 l Staff06 Role}</span>
+          <span class="credit-title">{text:07 l Staff06 Name}</span>
           <span class="credit-website">
-            <a href="{text:06 l Staff06 URL}" class="credit-website-link">Website</a>
+            <a href="{text:07 l Staff06 URL}" class="credit-website-link">Website</a>
           </span>
         </li>
-        {/block:If06lStaff06Name}
+        {/block:If07lStaff06Name}
+        {block:If07lStaff01Name}
       </ul>
     </div>
   </div>
 </section>
+{/block:If07lStaff01Name}
 
 {block:IfBannerImage}
 <section class="l-section section-banner">
@@ -496,9 +497,9 @@
             {text:03 l Circle Name}
           </a>
         </span>
-        {block:If07lFooterText}
-          <p class="footer-text">{text:07 l Footer Text}</p>
-        {/block:If07lFooterText}
+        {block:If08lFooterText}
+          <p class="footer-text">{text:08 l Footer Text}</p>
+        {/block:If08lFooterText}
       </div>
       <div class="footer-theme">
         <div class="footer-theme-author">
@@ -522,4 +523,3 @@
 
 </body>
 </html>
-
