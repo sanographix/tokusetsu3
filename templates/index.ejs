@@ -134,6 +134,10 @@ pageId = "index";
   </div>
 </section>
 
+{block:IfBookMode}
+ブックモード
+{/block:IfBookMode}
+
 {block:If03lStore01Name}
 <section class="l-section section-buy">
   <div class="l-container">
@@ -155,6 +159,7 @@ pageId = "index";
 </section>
 {/block:If03lStore01Name}
 
+{block:IfNotBookMode}
 {block:If05lTrack01Title}
   <section class="l-section section-tracklist">
     <div class="l-container">
@@ -240,6 +245,7 @@ pageId = "index";
     </div>
   </section>
 {/block:If05lTrack01Title}
+{/block:IfNotBookMode}
 
 {block:If04lYoutubeEmbedCode}
 <section class="l-section section-youtube">
@@ -345,6 +351,9 @@ pageId = "index";
 
 {block:IfBannerImage}
 <section class="l-section section-banner">
+  <header class="section-header">
+    <h2>BANNER</h2>
+  </header>
   <div class="l-container">
     <div class="section-content">
       <img src="{image:Banner}">

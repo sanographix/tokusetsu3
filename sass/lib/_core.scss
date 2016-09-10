@@ -11,7 +11,7 @@
     }
     &.is-enable-globalHeader-shadow {
         @media #{$mq-sm} {
-            background: linear-gradient(to bottom, $bg 0%, rgba(0,0,0,.5) 50%, rgba(0,0,0,0) 100%);
+            background: $globalheader-gradient;
         }
     }
 }
