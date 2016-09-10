@@ -4,9 +4,9 @@ pageId = "index";
 <% include _header %>
 
 <div class="globalHeader
-{block:If01lEnableHeaderShadow}
-  is-enable-globalHeader-shadow
-{/block:If01lEnableHeaderShadow}
+{block:If01lEnableHeaderMask}
+  is-enable-globalHeader-mask
+{/block:If01lEnableHeaderMask}
 ">
   <div class="l-container">
     <div class="globalHeader-inner">
@@ -37,9 +37,6 @@ pageId = "index";
           {block:IfTitleLogoImage}
             <img class="header-logo" src="{image:Title Logo}" alt="{title}" style="width: {text:01 l Header Title Width}px;">
           {/block:IfTitleLogoImage}
-          {block:IfNotTitleLogoImage}
-            {title}
-          {/block:IfNotTitleLogoImage}
         </h1>
       </div>
     </header>
@@ -136,49 +133,57 @@ pageId = "index";
   </div>
 </section>
 
-{block:IfBookMode}
-<section class="l-section section-bookSample">
-  <div class="l-container">
-    <div class="bookSample-container">
-      {block:IfBookModelSampleImage01Image}
-        <div class="bookSample-content">
-          <img src="{image:Book Mode l Sample Image 01}" class="bookSample-image">
-        </div>
-      {/block:IfBookModelSampleImage01Image}
+{block:IfBookModelSampleImage01Image}
+  <section class="l-section section-bookSample">
+    <div class="l-container">
+      <div class="bookSample-container
+      <%# 画像数によってカラム幅を変える %>
+        bookSample-items1
+        {block:IfBookModelSampleImage02Image} bookSample-items2{/block:IfBookModelSampleImage02Image}
+        {block:IfBookModelSampleImage03Image} bookSample-items3{/block:IfBookModelSampleImage03Image}
+        {block:IfBookModelSampleImage04Image} bookSample-items4{/block:IfBookModelSampleImage04Image}
+        {block:IfBookModelSampleImage05Image} bookSample-items5{/block:IfBookModelSampleImage05Image}
+        {block:IfBookModelSampleImage06Image} bookSample-items6{/block:IfBookModelSampleImage06Image}
+      ">
+          <div class="bookSample-content">
+            <img src="{image:Book Mode l Sample Image 01}" class="bookSample-image">
+          </div>
+        {/block:IfBookModelSampleImage01Image}
 
-      {block:IfBookModelSampleImage02Image}
-        <div class="bookSample-content">
-          <img src="{image:Book Mode l Sample Image 02}" class="bookSample-image">
-        </div>
-      {/block:IfBookModelSampleImage02Image}
+        {block:IfBookModelSampleImage02Image}
+          <div class="bookSample-content">
+            <img src="{image:Book Mode l Sample Image 02}" class="bookSample-image">
+          </div>
+        {/block:IfBookModelSampleImage02Image}
 
-      {block:IfBookModelSampleImage03Image}
-        <div class="bookSample-content">
-          <img src="{image:Book Mode l Sample Image 03}" class="bookSample-image">
-        </div>
-      {/block:IfBookModelSampleImage03Image}
+        {block:IfBookModelSampleImage03Image}
+          <div class="bookSample-content">
+            <img src="{image:Book Mode l Sample Image 03}" class="bookSample-image">
+          </div>
+        {/block:IfBookModelSampleImage03Image}
 
-      {block:IfBookModelSampleImage04Image}
-        <div class="bookSample-content">
-          <img src="{image:Book Mode l Sample Image 04}" class="bookSample-image">
-        </div>
-      {/block:IfBookModelSampleImage04Image}
+        {block:IfBookModelSampleImage04Image}
+          <div class="bookSample-content">
+            <img src="{image:Book Mode l Sample Image 04}" class="bookSample-image">
+          </div>
+        {/block:IfBookModelSampleImage04Image}
 
-      {block:IfBookModelSampleImage05Image}
-        <div class="bookSample-content">
-          <img src="{image:Book Mode l Sample Image 05}" class="bookSample-image">
-        </div>
-      {/block:IfBookModelSampleImage05Image}
+        {block:IfBookModelSampleImage05Image}
+          <div class="bookSample-content">
+            <img src="{image:Book Mode l Sample Image 05}" class="bookSample-image">
+          </div>
+        {/block:IfBookModelSampleImage05Image}
 
-      {block:IfBookModelSampleImage06Image}
-        <div class="bookSample-content">
-          <img src="{image:Book Mode l Sample Image 06}" class="bookSample-image">
-        </div>
-      {/block:IfBookModelSampleImage06Image}
+        {block:IfBookModelSampleImage06Image}
+          <div class="bookSample-content">
+            <img src="{image:Book Mode l Sample Image 06}" class="bookSample-image">
+          </div>
+        {/block:IfBookModelSampleImage06Image}
+        {block:IfBookModelSampleImage01Image}
+      </div>
     </div>
-  </div>
-</section>
-{/block:IfBookMode}
+  </section>
+{/block:IfBookModelSampleImage01Image}
 
 {block:If03lStore01Name}
 <section class="l-section section-buy">

@@ -9,9 +9,16 @@
         width: 100%;
         z-index: 2;
     }
-    &.is-enable-globalHeader-shadow {
+    &.is-enable-globalHeader-mask {
         @media #{$mq-sm} {
-            background: $globalheader-gradient;
+            background: $globalheader-mask;
+        }
+        .btn-tw,
+        .btn-fb {
+            @media #{$mq-sm} {
+                border: none;
+                box-shadow: none;
+            }
         }
     }
 }
@@ -33,6 +40,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media #{$mq-sm} {
+        border: 2px solid $bg;
+        box-shadow: 0 4px 10px rgba(0,0,0,.4);
+    }
     &:first-child {
         margin-left: 0;
     }
@@ -194,27 +205,48 @@
 .bookSample-container {
     @media #{$mq-sm} {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
+        align-items: center;
     }
 }
 .bookSample-content {
     text-align: center;
     margin-bottom: 1em;
-    @media #{$mq-sm} {
-        width: 48%;
-    }
-    @media #{$mq-md} {
-        width: 31%;
-    }
-    @media #{$mq-md} {
-        width: 32%;
-    }
     .bookSample-image {
         max-width: 100%;
     }
+    // サンプル画像数によって幅変えるやつ
+    @media #{$mq-sm} {
+        .bookSample-items1 & {
+            width: 100%;
+        }
+        .bookSample-items2 & {
+            width: 48%;
+        }
+        .bookSample-items3 & {
+            width: 48%;
+            @media #{$mq-md} {
+                width: 31%;
+            }
+        }
+        .bookSample-items4 & {
+            width: 48%;
+        }
+        .bookSample-items5 & {
+            width: 48%;
+            @media #{$mq-md} {
+                width: 31%;
+            }
+        }
+        .bookSample-items6 & {
+            width: 48%;
+            @media #{$mq-md} {
+                width: 31%;
+            }
+        }
+    }
 }
-
 
 // buy-button
 .section-buy {

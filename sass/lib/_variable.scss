@@ -14,7 +14,7 @@ $border: #ddd; // Border color
 $btn-tw: #55acee;
 $btn-fb: #3b5998;
 
-$globalheader-gradient: linear-gradient(to bottom, $bg 0%, rgba(255,255,255,.5) 50%, rgba(255,255,255,0) 100%);
+$globalheader-mask: rgba(255,255,255,.5);
 
 // Media Queries - Breakpoints
 
