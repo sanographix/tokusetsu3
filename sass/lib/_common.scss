@@ -60,5 +60,5 @@ h1,h2,h3,h4,h5,h6 {
 .tmblr-iframe,
 .tmblr-iframe--mobile-loggedin-controls,
 .iframe-controls--phone-mobile {
-    display: none;
+    display: none !important;
 }
