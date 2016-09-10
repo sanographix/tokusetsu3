@@ -200,11 +200,15 @@
 }
 .bookSample-content {
     text-align: center;
+    margin-bottom: 1em;
     @media #{$mq-sm} {
         width: 48%;
     }
     @media #{$mq-md} {
         width: 31%;
+    }
+    @media #{$mq-md} {
+        width: 32%;
     }
     .bookSample-image {
         max-width: 100%;
