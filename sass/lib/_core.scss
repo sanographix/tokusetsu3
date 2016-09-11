@@ -218,6 +218,9 @@
 .bookSample-content {
     text-align: center;
     margin-bottom: 1em;
+    @media #{$mq-sm} {
+        cursor: zoom-in;
+    }
     .bookSample-image {
         max-width: 100%;
     }
@@ -230,26 +233,47 @@
             width: 48%;
         }
         .bookSample-items3 & {
-            width: 48%;
-            @media #{$mq-md} {
-                width: 31%;
-            }
+            width: 31%;
         }
         .bookSample-items4 & {
             width: 48%;
         }
         .bookSample-items5 & {
-            width: 48%;
-            @media #{$mq-md} {
-                width: 31%;
-            }
+            width: 31%;
         }
         .bookSample-items6 & {
-            width: 48%;
-            @media #{$mq-md} {
-                width: 31%;
+            width: 31%;
+        }
+    }
+}
+
+.bookSample-lightbox {
+    display: none;
+    @media #{$mq-sm} {
+    cursor: zoom-out;
+        &.is-open {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            background-color: rgba(0,0,0,.8);
+            img {
+                max-width: 100%;
+                max-height: 100%;
             }
         }
+    }
+}
+
+// Lightboxが開いてるときはスクロールさせない
+body.is-open {
+    @media #{$mq-sm} {
+        overflow: hidden;
     }
 }
 
