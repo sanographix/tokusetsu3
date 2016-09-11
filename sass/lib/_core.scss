@@ -73,6 +73,9 @@
     align-items: center;
     max-width: 60%;
     word-break: break-all;
+    a {
+        color: $base;
+    }
 }
 .labelName-logoImg {
     max-width: 100%;
