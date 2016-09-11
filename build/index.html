@@ -192,7 +192,12 @@
     <div class="globalHeader-inner">
       <div class="globalHeader-labelName">
         <a href="{text:03 l Circle URL}">
+          {block:IfCircleLogoImage}
           <img class="labelName-logoImg" src="{image:Circle Logo}" alt="{text:03 l Circle Name}" style="width: {text:01 l Circle Logo Width}px;">
+          {block:IfCircleLogoImage}
+          {block:IfNotCircleLogoImage}
+            {text:03 l Circle Name}
+          {block:IfNotCircleLogoImage}
         </a>
       </div>
       {block:If01lEnableShareButtons}
