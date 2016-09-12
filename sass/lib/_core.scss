@@ -123,7 +123,16 @@
         align-items: flex-start;
         .header {
             margin-top: 3%;
+            @media #{$mq-sm} {
+                margin-top: 7%;
+            }
+            @media #{$mq-md} {
+                margin-top: 5%;
+            }
         }
+    }
+    &.is-position-middle {
+        align-items: center;
     }
     &.is-position-bottom {
         align-items: flex-end;
