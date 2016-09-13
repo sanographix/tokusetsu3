@@ -35,8 +35,12 @@
   <meta name="select:Header Title Logo Position" content="middle" title="Middle">
   <meta name="select:Header Title Logo Position" content="bottom" title="Bottom">
 
+  <meta name="select:Global Header Color" content="transparent" title="Transparent">
+  <meta name="select:Global Header Color" content="dark" title="Dark">
+  <meta name="select:Global Header Color" content="light" title="Light">
+  <meta name="select:Global Header Color" content="accent" title="Accent Color">
+
   <meta name="if:01 l Enable Share Buttons" content="1"/>
-  <meta name="if:01 l Enable Header mask" content="0"/>
   <meta name="if:06 l Footer Additional Content" content="0"/>
 
   <%# ブックモード %>
@@ -121,7 +125,7 @@
     <meta name="description" content="{MetaDescription}" />
     <meta name="og:description" content="{MetaDescription}" />
   {/block:Description}
-  <meta property="og:title" content="{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}{block:IndexPage} - {text:03 l Circle Name}{/block:IndexPage}" />
+  <meta property="og:title" content="{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}{block:IndexPage}{block:If03lCircleName} - {text:03 l Circle Name}{/block:If03lCircleName}{/block:IndexPage}" />
   <meta property="og:type" content="website" />
 
   <meta property="og:site_name" content="{Title}" />

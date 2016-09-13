@@ -2,18 +2,22 @@
 
 // global header
 .globalHeader {
-    background-color: $bg;
-    @media #{$mq-sm} {
-        background-color: transparent;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 2;
-    }
-    &.is-enable-globalHeader-mask {
+    &.is-transparent {
+        background-color: $bg !important;
         @media #{$mq-sm} {
-            background: $globalheader-mask;
+            background-color: transparent !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+        }
+    }
+    &.is-dark,
+    &.is-light,
+    &.is-accent {
+        @media #{$mq-sm} {
+            position: static;
         }
         .btn-tw,
         .btn-fb {
@@ -21,6 +25,23 @@
                 border: none;
                 box-shadow: none;
             }
+        }
+    }
+    &.is-dark {
+        background-color: #36393d !important;
+        a {
+            color: #fff;
+        }
+    }
+    &.is-light {
+        background-color: #fff !important;
+        a {
+            color: #36393d;
+        }
+    }
+    &.is-accent {
+        a {
+            color: #fff;
         }
     }
 }
