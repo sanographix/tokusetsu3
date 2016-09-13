@@ -128,6 +128,7 @@ style="background-color: {color:Accent};"
                   <a href="{text:Store03 URL}">{text:03 l Store03 Name}</a>
                 </li>
                 {/block:If03lStore03Name}
+
                 {block:If03lStore01Name}
               </ul>
             </dd>
@@ -187,6 +188,7 @@ style="background-color: {color:Accent};"
             <img src="{image:Book Mode l Sample Image 06}" class="bookSample-image bookSample-image6">
           </div>
         {/block:IfBookModelSampleImage06Image}
+
         {block:IfBookModelSampleImage01Image}
       </div>
     </div>
@@ -330,6 +332,9 @@ style="background-color: {color:Accent};"
             </div>
           </li>
           {/block:If05lTrack08Title}
+
+          <!--※トラック09以降を追加したい場合、このエリアに追記しましょう（ドキュメント参照）-->
+
           {block:If05lTrack01Title}
         </ol>
       </div>
@@ -444,6 +449,9 @@ style="background-color: {color:Accent};"
           </span>
         </li>
         {/block:If07lStaff06Name}
+
+        <!--※スタッフ07以降を追加したい場合、このエリアに追記しましょう（ドキュメント参照）-->
+
         {block:If07lStaff01Name}
       </ul>
     </div>
@@ -468,10 +476,10 @@ style="background-color: {color:Accent};"
 <section class="l-section section-share">
   <div class="l-container">
     <div class="footer-shareBtns">
-      <a href="https://twitter.com/share?text=&url=" class="btn-tw" target="_blank">
+      <a href="https://twitter.com/share?text={block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}{block:IndexPage}{block:If03lCircleName} - {text:03 l Circle Name}{/block:If03lCircleName}{/block:IndexPage}&url={BlogURL}" class="btn-tw" target="_blank">
         <svg class="social-share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="-623 385 32 32"><path fill="#FFF" d="M-591 391.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6-1.2-1.3-2.9-2.1-4.8-2.1-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.5-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 2.9 1.9 6.4 2.9 10.1 2.9 12.1 0 18.7-10 18.7-18.7v-.8c1.3-1 2.4-2.1 3.3-3.4z"/></svg>
       </a>
-      <a href="http://www.facebook.com/sharer.php?u=" class="btn-fb" target="_blank">
+      <a href="http://www.facebook.com/sharer.php?u={BlogURL}" class="btn-fb" target="_blank">
         <svg class="social-share-icon" xmlns="http://www.w3.org/2000/svg" viewBox="-623 385 32 32"><path fill="#FFF" d="M-605 417h-6v-16h-4v-5.5h4v-3.2c0-4.5 1.2-7.2 6.5-7.2h4.4v5.5h-2.8c-2.1 0-2.2.8-2.2 2.2v2.8h5l-.6 5.5h-4.4l.1 15.9z"/></svg>
       </a>
     </div>
