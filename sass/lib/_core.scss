@@ -528,9 +528,6 @@ body.is-open {
 }
 .footer-theme-tokusetsu3 {
     display: block;
-    a {
-        font-size: 1rem;
-    }
 }
 .footer-install-btn {
     @include btn;
@@ -539,5 +536,18 @@ body.is-open {
     &:hover {
         text-decoration: none !important;
         background-color: $border;
+    }
+}
+
+// demo
+.section-demo {
+    .l-container {
+        border: 2px dashed $border;
+        padding: 1em;
+        box-sizing: border-box;
+    }
+    h3 {
+        text-align: center;
+        font-size: 150%;
     }
 }

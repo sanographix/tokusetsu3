@@ -29,8 +29,7 @@
 
   <meta name="color:Accent" content="#ed1c24"/>
 
-  <meta name="select:Theme Color" content="dark" title="Dark">
-  <meta name="select:Theme Color" content="light" title="Light">
+  <meta name="if:00 l Enable Dark Mode" content="1"/>
 
   <meta name="select:Header Title Logo Position" content="top" title="Top">
   <meta name="select:Header Title Logo Position" content="middle" title="Middle">
@@ -156,12 +155,13 @@
     <meta property="og:image" content="{image:Header Image}" />
   {block:IfNotOgImageImage}
 
-  
-<!--
-  <link rel="stylesheet" href="css/style-{select:ThemeColor}.css" />
--->
-<link rel="stylesheet" href="https://dl.dropboxusercontent.com/u/282961/tokusetsu3/style-{select:Theme Color}.css
-" />
+  {block:IfNot00lEnableDarkMode}
+  <link rel="stylesheet" href="http://static.tumblr.com/xxf6ewk/eXKodxpw3/style-light.css" />
+  {/block:IfNot00lEnableDarkMode}
+  {block:If00lEnableDarkMode}
+  <link rel="stylesheet" href="http://static.tumblr.com/xxf6ewk/fPyodxpv3/style-dark.css
+  " />
+  {/block:If00lEnableDarkMode}
 
   <link rel="shortcut icon" href="{Favicon}">
 
@@ -740,10 +740,7 @@ style="background-color: {color:Accent};"
   </div>
 </footer>
 
-<script src="https://dl.dropboxusercontent.com/u/282961/tokusetsu3/scripts.js"></script>
-<!--
-<script src="js/scripts.js"></script>
--->
+<script src="http://static.tumblr.com/xxf6ewk/yS6odxpso/scripts.js"></script>
 
 </body>
 </html>
