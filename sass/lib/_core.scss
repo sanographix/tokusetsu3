@@ -112,14 +112,19 @@
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
-    height: 55vw;
     max-width: 1800px;
     position: relative;
     display: flex;
     align-items: center;
+    // ヒーローヘッダ画像が存在する場合は高さを指定する
+    &.has-headerImage {
+        height: 55vw;
+        @media (min-width: 1800px) {
+            height: 1000px;
+        }
+    }
     // ブラウザ幅が広すぎる場合、左右にグラデーションをかける
     @media (min-width: 1800px) {
-        height: 1000px;
         &:before {
             content: "";
             position: absolute;
