@@ -1,0 +1,435 @@
+<% var
+pageTitle = "各項目のカスタマイズ | Docs";
+pageId = "docs-customize";
+pageUrl = "/docs/customize.html";
+pageDescription = "Tokusetsu 3 docs";
+%>
+<% include ../_header %>
+<% include _docs-nav %>
+
+<nav class="main-nav">
+  <a href="./customize.html">＜ 各項目のカスタマイズ</a>
+  <a href="./publish.html">いよいよ公開、その前に ＞</a>
+</nav>
+
+<h1>各項目のカスタマイズ</h1>
+
+<div class="progressBar-wrapper">
+  <span>進捗バー</span>
+  <div class="progressBar">
+    <div class="progress" style="width: 50%"></div>
+  </div>
+</div>
+
+<p>Tokusetsu 3 のカスタマイズ方法について詳しく解説します。</p>
+
+<figure>
+	<img src="../images/docs/fig-customize.jpg">
+    <figcaption>「テーマの編集」画面</figcaption>
+</figure>
+
+<p>Tumblr の「テーマの編集」画面で、Tokusetsu 3 のカスタマイズができます。すべての欄を埋める必要はありません。必要なところだけ埋めてください。</p>
+
+<h2>外観オプション</h2>
+<table>
+  <tr>
+    <th>タイトル</th>
+    <td>作品名を入力します。さまざまな場所で使うので必ず入力してください。
+      <div class="example">
+        <span class="badge">例</span> ANTHEMS 3
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>説明</th>
+    <td>サイトの説明文（meta description）やシェアされたときの文言に影響します。特にこだわりがなければ、後述する「Introduction」のコピペでよいでしょう。
+      <br>※なお、ここを空欄にすると、Twitterでシェアしたとき（Twitter Cards）の表示がエラーになるようです。なにかしらテキストを入れておくほうが安全です。
+      <div class="example">
+        <span class="badge">例</span> トクセツレコーズが2年ぶり3枚目のアルバムをリリース！ ...
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>プロフィール画像</th>
+    <td>faviconとして表示されます。サイズは特に指定ありませんが、正方形の画像がよいでしょう。</td>
+  </tr>
+</table>
+
+<h2>画像素材をアップロードする</h2>
+<p>ファイル形式は jpg, gif, png など tumblr が読み取れる形式ならなんでもOKです。はじめて Tokusetsu を使う場合は、プレビューを確認しながら少しずつ素材を埋めていく方法をおすすめします。</p>
+<p><span class="badge">必須</span> ラベルがついている欄は必須です。なお、デモページで使っている画像のリンクを設けましたので参考にしてください。（一見なにも見えない画像は白抜き文字です）</p>
+<table>
+  <tr>
+    <th>Background Image</th>
+    <td>背景画像。タイル状に敷き詰められるので、継ぎ目のないパターン画像がベターです</td>
+  </tr>
+  <tr>
+    <th>Header Image</th>
+    <td><span class="badge">必須</span> ヘッダのメイン画像。1800*1000px推奨。ここにタイトルロゴを含めてもよいですが、ロゴは後述する「Title Logo」欄を使ったほうが綺麗に仕上がります。したがって、ここはロゴを省いたメインビジュアルを載せるとよいでしょう
+    <br><a href="http://static.tumblr.com/d6146f92582189aa2d1e96337b6d65f5/xxf6ewk/qiDodefbn/tumblr_static_dnh0jk0rpi8k80c4ow880gkoo.jpg">※サンプル画像</a></td>
+  </tr>
+  <tr>
+    <th>Circle Logo</th>
+    <td><span class="badge">あるとよい</span> ヘッダに表示するサークルロゴ画像。透過png推奨。原寸の2倍のサイズで作成すると高解像度ディスプレイで綺麗に見えます（その場合、後述の「Circle Logo Width」に原寸の横幅を入力してください）。<br>ヘッダが白っぽい場合は暗めの色、黒っぽい場合は白抜きロゴにするとよいでしょう。
+    <br><a href="http://static.tumblr.com/73b49a59edfdb943f42597ceb25d19f0/xxf6ewk/vBPocxrg9/tumblr_static_9p65jwj1mswskkswgco0w8808.png">※サンプル画像</a></td>
+  </tr>
+  <tr>
+    <th>Jacket</th>
+    <td><span class="badge">必須</span> CDのジャケットや同人誌の表紙画像。横900px以上推奨。
+    <br><a href="http://static.tumblr.com/810a0e8aa44b30925afb495da8218206/xxf6ewk/Z50ocykzb/tumblr_static_1yuwfocogqn4kok8oogkc00oc.jpg">※サンプル画像</a></td>
+  </tr>
+  <tr>
+    <th>Title Logo</th>
+    <td><span class="badge">あるとよい</span> ヘッダに表示する作品ロゴ画像。透過png推奨。原寸の2倍のサイズで作成すると高解像度ディスプレイで綺麗に見えます（その場合、後述の「Title Logo Width」に原寸の横幅を入力してください）。
+    <br><a href="http://static.tumblr.com/5b08614f3ba43b717ccef53ad97f252b/xxf6ewk/b9rod9lxf/tumblr_static_50862r3i6eoswg8so40cgkwo0.png">※サンプル画像</a></td>
+  </tr>
+  <tr>
+    <th>Banner</th>
+    <td>バナー画像。サイズは自由。
+    <br><a href="http://static.tumblr.com/619983f6fd071f56d9a57fb88433cc76/xxf6ewk/3oCoczh73/tumblr_static_alnehdz991k4c0wgoc8gkgw0w.jpg">※サンプル画像</a></td>
+  </tr>
+  <tr>
+    <th>Og Image</th>
+    <td><span class="badge">あるとよい</span> TwitterやFacebookでシェアされたときに表示される画像。1200*630px推奨。<br>
+    ※Twitterにシェアされたときの見え方は<a href="https://cards-dev.twitter.com/validator">このバリデータ</a>、Facebookは<a href="https://developers.facebook.com/tools/debug/sharing">このデバッガ</a>から確認できます。<br>※なにも入力しない場合、「Header Image」を代替画像として表示します。
+    <br><a href="http://static.tumblr.com/65aa8a5bf4ece9f5024cc2f7c87fb971/xxf6ewk/jj5ocylik/tumblr_static_drteievc5wggokcg8ss08k0ko.jpg">※サンプル画像</a></td>
+  </tr>
+  <tr>
+    <th>Introduction Heading Image</th>
+    <td>イントロダクションの見出しの文字を置き換える画像。透過png推奨。ひと味違った個性を出したいときにご利用ください。詳しくは<a href="./tips.html#how-to-heading-image">うまく作るコツ</a>ページをご覧ください。
+    <br><a href="http://static.tumblr.com/8b07a434c33ef27b720af64e4d3fe567/xxf6ewk/ggyodk34w/tumblr_static_5kiivii8678k4skscsc8kcskg.png">※サンプル画像</a></td>
+  </tr>
+</table>
+
+<h2>全般</h2>
+<table>
+  <tr>
+    <th>Accent</th>
+    <td>アクセントカラーを指定できます。<br>デフォルト: #ed1c24</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td>見出し部分のフォントを指定できます。<br>デフォルト: Helvetica</td>
+  </tr>
+  <tr>
+    <th>Body</th>
+    <td>本文のフォントを指定できます。<br>デフォルト: Helvetica</td>
+  </tr>
+  <tr>
+    <th>Enable Dark Mode</th>
+    <td>テーマカラーを「Dark」にします。無効にすると「Light」となり、白っぽいページになります。<br>デフォルト: 有効</td>
+  </tr>
+</table>
+
+<h2>01 | ヘッダ</h2>
+<p>以下、編集箇所がわかりやすいように、セクションごとに01などの通し番号を振っています。</p>
+
+<figure>
+	<img src="../images/docs/fig-header.jpg">
+    <figcaption>このセクションで編集できる箇所</figcaption>
+</figure>
+
+<table>
+  <tr>
+    <th>Global Header Color</th>
+    <td>グローバルヘッダ（ページ上部の帯状のヘッダ）の色を選択します。透明だとサークルロゴが読みづらいときに「Dark」「Light」「Accent Color（上記で指定したアクセントカラー）」から選択してください。なお「Transparent」はPCのみ有効です（スマホで見るとロゴがヘッダにかぶりすぎるので）<br>デフォルト: Transparent（透明）</td>
+  </tr>
+  <tr>
+    <th>Enable Share Buttons</th>
+    <td>Twitter, Facebookのシェアボタンを表示するか選択します。有効にした場合はページ下部にもシェアボタンが表示されます。<br>デフォルト: 有効</td>
+  </tr>
+  <tr>
+    <th>Header Title Logo Position</th>
+    <td>タイトルロゴ画像の位置を「Top」「Middle」「Bottom」から選べます。<br>デフォルト: Bottom</td>
+  </tr>
+  <tr>
+    <th>Circle Logo Width</th>
+    <td>サークルロゴの横幅を数値で入力します（単位: px）。何も入力しない場合、画像を等倍で表示します。</td>
+  </tr>
+  <tr>
+    <th>Header Title Width</th>
+    <td>タイトル画像の横幅を数値で入力します（単位: px）。何も入力しない場合、画像を等倍で表示します。</td>
+  </tr>
+</table>
+
+<h2>02 | イントロダクション</h2>
+
+<figure>
+	<img src="../images/docs/fig-intro.jpg">
+    <figcaption>このセクションで編集できる箇所</figcaption>
+</figure>
+
+<table>
+  <tr>
+    <th>Introduction</th>
+    <td>イントロダクション本文を入力します。やや長めに書いたほうが見栄えが良いです。改行タグ（br）が使えます。
+      <div class="example">
+        <span class="badge">例</span> トクセツレコーズが2年ぶり3枚目のアルバムをリリース！ ...
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>Introduction Heading</th>
+    <td>イントロダクション見出しを入力します。画像で代替するつもりでも、入力したほうがアクセシビリティが高まるので、できれば入れてください。
+      <div class="example">
+        <span class="badge">例</span> あれから2年──待望の3rdアルバム遂に完成!!
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>Introduction Heading Image Width</th>
+    <td>イントロダクション見出し画像の横幅を数値で入力します（単位: px）。何も入力しない場合、画像を等倍で表示します。</td>
+  </tr>
+</table>
+
+<h2>03 | スペック</h2>
+
+<figure>
+	<img src="../images/docs/fig-spec.jpg">
+    <figcaption>このセクションで編集できる箇所</figcaption>
+</figure>
+
+<table>
+  <tr>
+    <th>Circle Name</th>
+    <td>サークル名を入力します。
+      <div class="example">
+        <span class="badge">例</span> トクセツレコーズ
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>Circle URL</th>
+    <td>サークルURLを入力します。
+      <div class="example">
+        <span class="badge">例</span> http://www.sanographix.net
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>Spec</th>
+    <td>仕様を入力します。
+      <div class="example">
+        <span class="badge">例</span> プレスCD ＋ ブックレット8ページ
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>Release Date</th>
+    <td>発売日を入力します。
+      <div class="example">
+        <span class="badge">例</span> 20xx年x月x日
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>Booth Number</th>
+    <td>即売会の配置番号を入力します。
+      <div class="example">
+        <span class="badge">例</span> 201x年W3　第一展示場　X-00
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>Price</th>
+    <td>価格を入力します。
+      <div class="example">
+        <span class="badge">例</span> 1,000円
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>Store 01-03 Name</th>
+    <td>販売先のストア名をそれぞれ入力します（3箇所まで）
+      <div class="example">
+        <span class="badge">例</span> A Store
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>Store 01-03 URL</th>
+    <td>各ストアの販売ページURLをそれぞれ入力します（3つまで）
+      <div class="example">
+        <span class="badge">例</span> http://example.com/item/0000000
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>Store Buttons Heading</th>
+    <td>ストアへの誘導ボタンを表示するセクションの見出しを指定できます（※ "Store 01 Name"に何も入力していない場合は表示されません）
+      <div class="example">
+        <span class="badge">例</span> AVAILABLE NOW
+      </div>
+    </td>
+  </tr>
+</table>
+
+<h2>ブックモード</h2>
+<p>同人誌・合同誌の告知用セクションです。</p>
+<p>※ブックモードと言いつつも、特にモードの切り替え機能などはありません。同人CDの告知にもこのセクションは使えます。</p>
+<table>
+  <tr>
+    <th>Sample Image 01-06</th>
+    <td>本のサンプル画像をアップロードします（6枚まで）。サイズは自由ですが、あまり大きいファイルサイズになりすぎないほうがよいでしょう。
+    </td>
+  </tr>
+  <tr>
+    <th>Book Sample Heading</th>
+    <td>サンプル表示セクションの見出しテキストを指定できます。
+      <div class="example">
+        <span class="badge">例</span> SAMPLE
+      </div>
+    </td>
+  </tr>
+</table>
+
+<h2>04 | 貼付けコード</h2>
+<table>
+  <tr>
+    <th>Soundcloud Embed Code</th>
+    <td>Soundcloudの貼り付けタグを入力します。貼り付けタグは、各楽曲の「Share」をクリックした先の「Embed」タブで、書いてあるコードの https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/<strong><<ここの9桁くらいの数字>></strong>&amp;auto_play=false&amp;... です。<br>
+      <img src="../images/docs/fig-soundcloud.png" width="400px">
+      <div class="example">
+        <span class="badge">例</span> 78607110
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>Youtube Embed Code</th>
+    <td>Youtubeの貼り付けタグを入力します。貼り付けタグは、「共有」-> 「埋め込みコード」の中に書いてあるコードの、http://www.youtube.com/embed/<<ここの文字列>> です。
+      <div class="example">
+        <span class="badge"_>例</span> hQPbpjdfbJM
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>Nicovideo Embed Code</th>
+    <td>ニコニコ動画の貼り付けタグを入力します。貼り付けタグは動画のURLに記載されているsm12345678のような文字列です。
+      <div class="example">
+        <span class="badge">例</span> sm12345678
+      </div>
+    </td>
+  </tr>
+</table>
+
+<h2>05 | トラックリスト</h2>
+
+<figure>
+	<img src="../images/docs/fig-tracklist.jpg">
+    <figcaption>このセクションで編集できる箇所</figcaption>
+</figure>
+
+<table>
+  <tr>
+    <th>Track01-10 Title</th>
+    <td>曲名を入力します。10曲まで入力できます
+      <div class="example">
+        <span class="badge">例</span> DELTA
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>Track01-10 Description</th>
+    <td>曲に補足説明がある場合は入力します。二次創作の場合は原曲など書くと良さそうです。
+      <div class="example">
+        <span class="badge">例</span> feat.RIVERSIDE GIRLS
+      </div>
+    </td>
+  </tr>
+</table>
+<p>※曲を11曲以上入力したい場合は、「<a href="./tips.html#how-to-add-tracklist">うまく作るコツ</a>」ページをご覧ください。</p>
+
+<h2>06 | 追加の情報</h2>
+
+<figure>
+	<img src="../images/docs/fig-additional.jpg">
+    <figcaption>このセクションで編集できる箇所</figcaption>
+</figure>
+
+<p>ページ下部に「追加の情報」セクションを表示できます。ノベルティ情報や、当日のおしながき画像など、補足する情報がある場合にご利用ください。</p>
+<table>
+  <tr>
+    <th>Footer Additional Content</th>
+    <td>「追加の情報」セクションを表示するか選べます。<br>デフォルト: 有効
+    </td>
+  </tr>
+  <tr>
+    <th>Footer Additional Heading</th>
+    <td>「追加の情報」セクションの見出しを入力します。
+      <div class="example">
+        <span class="badge">例</span> 会場特典
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>Footer Additional Text</th>
+    <td>「追加の情報」セクションの本文を入力します。
+      <div class="example">
+        <span class="badge">例</span> 会場来場者に特典として、特製ステッカーをプレゼントします
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>Footer Additional Image</th>
+    <td>「追加の情報」セクションに表示できる画像をアップロードできます。
+    <br><a href="http://static.tumblr.com/761bd4dd9570b1b0c9f0e4c82dfe71c4/xxf6ewk/HUnod9tw6/tumblr_static_61dhismvcecko00kww48o88cs.png">※サンプル画像</a></td>
+  </tr>
+</table>
+
+<h2>07 | クレジット</h2>
+
+<figure>
+	<img src="../images/docs/fig-credit.jpg">
+    <figcaption>このセクションで編集できる箇所</figcaption>
+</figure>
+
+<table>
+  <tr>
+    <th>Staff01-06 Name</th>
+    <td>スタッフの名前を入力します。6人まで入力できます。
+      <div class="example">
+        <span class="badge">例</span> TOKU SETSUKO
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>Staff01-06 Role</th>
+    <td>各スタッフの役割を入力します。
+      <div class="example">
+        <span class="badge">例</span> Vocal
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <th>Staff01-06 URL</th>
+    <td>各スタッフのウェブサイトURLを入力します。サイトを持っていないスタッフは空欄で良いです。
+    </td>
+  </tr>
+</table>
+<p>※スタッフを7人以上入力したい場合は、「<a href="./tips.html#how-to-add-tracklist">うまく作るコツ</a>」ページをご覧ください。</p>
+
+<h2>08 | フッタ</h2>
+
+<figure>
+	<img src="../images/docs/fig-footer.jpg">
+    <figcaption>このセクションで編集できる箇所</figcaption>
+</figure>
+
+<table>
+  <tr>
+    <th>Footer Text</th>
+    <td>ページの最後に表示するテキストを入力します。二次創作の場合は注意書きとかあると良いかもです。
+      <div class="example">
+        <span class="badge">例</span> 当作品は二次創作作品であり、すべての企業・団体とは一切関係ありません。
+      </div>
+    </td>
+  </tr>
+</table>
+
+<p>これでカスタマイズは終了です。お疲れ様でした。</p>
+<p>いよいよ公開……の前に、動作確認しておきましょう。<a href="./publish.html">次ページ</a>の確認事項をお読みください。</p>
+
+<a href="publish.html" class="btn btn-primary btn-full">次のページへすすむ</a>
+
+<% include _docs-footer %>
+<% include ../_footer %>

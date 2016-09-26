@@ -1,0 +1,91 @@
+<% var
+pageTitle = "はじめよう | Docs";
+pageId = "docs-start";
+pageUrl = "/docs/start.html";
+pageDescription = "Tokusetsu 3 docs";
+%>
+<% include ../_header %>
+<% include _docs-nav %>
+
+<nav class="main-nav">
+  <a href="./">＜ ドキュメント ホーム</a>
+  <a href="./customize.html">各項目のカスタマイズ ＞</a>
+</nav>
+
+<h1>はじめよう</h1>
+
+<div class="progressBar-wrapper">
+  <span>進捗バー</span>
+  <div class="progressBar">
+    <div class="progress" style="width: 25%"></div>
+  </div>
+</div>
+
+<p>このページでは Tokusetsu 3 をはじめて使う方へ、設定方法を解説します。</p>
+
+<h2>1. インストールする</h2>
+
+<p>事前に<a href="https://www.tumblr.com/register">tumblr のユーザー登録</a>を行なってください。</p>
+
+<ol>
+  <li>Tokusetsu 3 を適用するための<a href="https://www.tumblr.com/new/blog">ブログを新規作成</a>します。
+    <ul>
+      <li>はじめはパスワード付きの非公開ブログとして作成し、制作が完了したら公開ブログに変更するのをおすすめします。
+    </ul>
+  <li><a href="https://github.com/sanographix/tokusetsu3/blob/master/build/index.html">テーマのhtmlファイル (index.html)</a>をコピーします。（※そのページの右上らへんに「Raw」ボタンがあるのでそこをクリックするとコピーしやすい）
+  <li>Tumblr のテーマカスタマイズ画面を開いて、「HTMLを編集」を押します。
+    <ul><li><img src="../images/docs/fig-edit-html.jpg"></li></ul>
+  <li>もとの html を削除して <code>index.html</code> の中身を貼り付けて保存します。
+  <li>下記の「カスタマイズする」に従って設定を行います。
+</ol>
+
+<aside class="caution">
+  <h3>Tokusetsu 1, 2 をお使いの方へ</h3>
+Tokusetsu 3 は、Tokusetsu 1, Tokusetsu 2 と<strong>互換性がありません。</strong> Tokusetsu 1 や 2 を適用した Tumblr に Tokusetsu 3 を上書き保存すると、フォームに入力された内容がすべて消えます。十分ご注意ください。
+</aside>
+
+
+<h2>2. カスタマイズする</h2>
+
+<p>テンプレートの機能を正しく使用できるようにするため、上から順に必ず設定を行なってください。</p>
+
+<h3>2-1: モバイルレイアウトのチェックを外す</h3>
+
+<figure>
+	<img src="../images/docs/fig-mobile-layout.jpg">
+    <figcaption>モバイルレイアウトのチェック</figcaption>
+</figure>
+
+<ul>
+  <li>Tumblr のテーマカスタマイズ画面を開いて 「▾ 詳細設定」の<font color="red">「モバイルレイアウトを使用する」の チェックを外す</font>
+  <ul>
+    <li>このチェックが外れていないとスマートフォンでうまく表示されないので<font color="red">必ず外してください</font>。
+  </ul>
+  <li>その他「詳細設定」内の項目はすべてオフでOKです。
+</ul>
+
+<h3>2-2: カスタマイズの設定をする</h3>
+
+<ul>
+  <li>Tumblr のテーマカスタマイズ画面で、各項目を設定します。
+    <ul>
+      <li>各項目については次ページ「<a href="./customize.html">各項目のカスタマイズ</a>」で詳しく解説します。
+    </ul>
+  <li>必要な項目を埋めたら完成です。
+</ul>
+
+<h3>2-3: サイトを公開する</h3>
+
+<ul>
+  <li>Tumblr のテーマカスタマイズ画面の「保存」をクリックして公開します。
+    <ul>
+      <li>公開前に確認することは「<a href="./publish.html">いよいよ公開、その前に</a>」ページにまとめましたので、必ず目を通してください。
+    </ul>
+</ul>
+
+<p>次ページで「<a href="./customize.html">各項目のカスタマイズ</a>」を詳しく解説します。</p>
+
+<a href="customize.html" class="btn btn-primary btn-full">次のページへすすむ</a>
+
+<% include _docs-footer %>
+<% include ../_footer %>

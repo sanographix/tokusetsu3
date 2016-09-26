@@ -1,0 +1,273 @@
+@import 'https://fonts.googleapis.com/css?family=Noto+Sans';
+
+// Core (Main Style)
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background: $bg;
+    color: $base;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+// global Header
+.l-globalHeader {
+    background-color: $red;
+    color: $bg;
+    a {
+        color: $bg;
+    }
+}
+.globalHeader-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .globalHeader-logo {
+        a {
+            display: inline-block;
+            padding: 1em 1em 1em 0;
+        }
+    }
+    .globalHeader-nav {
+        ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+        }
+        li {
+            a {
+                display: inline-block;
+                padding: 1em;
+            }
+            &:last-child a {
+                padding-right: 0;
+            }
+        }
+        .tw {
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}
+
+// Layout
+.container {
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 1;
+    @media #{$mq-sm} {
+        display: flex;
+        width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media #{$mq-md} {
+        width: 940px;
+    }
+    @media #{$mq-lg} {
+        width: 1140px;
+    }
+}
+.nav {
+    background-color: $bg-light;
+    padding: .5em 1em;
+    margin-top: 1em;
+    @media #{$mq-sm} {
+        width: 200px;
+        padding: 1em;
+        margin-top: 0;
+    }
+    a.is-selected {
+        font-weight: bold;
+        color: $base;
+        &:before {
+            content: "👉 ";
+        }
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        margin: .5em 0;
+        @media #{$mq-sm} {
+            margin: 1em 0;
+        }
+    }
+}
+.main {
+    word-wrap: break-word;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    @media #{$mq-sm} {
+        flex: 1;
+        margin-left: 5%;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: .85rem;
+    margin-bottom: 1em;
+}
+
+// プログレスバー
+.progressBar-wrapper {
+    margin: 1em 0;
+    span {
+        color: $light;
+        font-size: .8em;
+        display: inline-block;
+    }
+}
+.progressBar {
+    display: flex;
+    background-color: $bg-light;
+    height: .5em;
+    .progress {
+        background-color: $link;
+        height: 100%;
+    }
+}
+
+// 書式いろいろ
+p {
+    line-height: 1.7;
+}
+.notice {
+    color: $light;
+    font-size: .85rem;
+}
+a {
+    color: $link;
+    transition: all .2s;
+    text-decoration: none;
+    &:hover {
+        color: $hover;
+    }
+}
+h1,h2 {
+    font-weight: normal;
+}
+h1,h2,h3,h4,h5,h6 {
+    line-height: 1.3;
+    margin: 1.5em 0 .7em;
+    a,a:hover {
+        color: $base;
+        text-decoration: none;
+    }
+}
+h1 {
+    @media #{$mq-sm} {
+        font-size: 2.2rem;
+    }
+}
+h2 {
+    @media #{$mq-sm} {
+        font-size: 1.7rem;
+    }
+}
+aside {
+    margin: 1.5em auto;
+    border: 1px solid $border;
+    padding: 1em;
+    > h3,h4,h5 {
+        margin-top: 0;
+    }
+}
+aside.caution {
+    border-left: 5px solid #ce4844;
+    h3 {
+        color: #ce4844;
+    }
+}
+code {
+    border: 1px solid $border;
+    border-radius: 3px;
+    font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-bottom: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+    overflow: auto;
+    display: block;
+    font-size: .9rem;
+}
+table th,
+table td {
+    border: 1px solid $border;
+    padding: .6em 1em;
+}
+table th {
+    background: lighten($bg-light, 3%);
+    text-align: right;
+    min-width: 60px;
+    font-size: .8rem;
+    text-align: left;
+    @media #{$mq-sm} {
+        text-align: right;
+        font-size: .9rem;
+        min-width: 150px;
+    }
+}
+
+.example {
+    background-color: #fcf8e3;
+    padding: .3em .5em;
+    margin-top: .5em;
+    font-size: .8rem;
+    color: #8a6d3b;
+}
+.badge {
+    color: #8a6d3b;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+figure {
+    margin: 1.5em auto;
+    text-align: center;
+    img {
+        max-width: 100%;
+    }
+    figcaption {
+        text-align: center;
+        margin: .5em 0;
+        font-size: .85rem;
+        color: $light;
+    }
+}
+
+pre {
+    padding: 1em;
+    background: lighten($bg-light, 3%);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+// footer
+.section-footer {
+    background-color: $bg-light;
+    text-align: center;
+    font-size: .8rem;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    @media #{$mq-sm} {
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+}

@@ -1,0 +1,116 @@
+<% var
+pageTitle = "うまく作るコツ | Docs";
+pageId = "docs-tips";
+pageUrl = "/docs/tips.html";
+pageDescription = "Tokusetsu 3 docs";
+%>
+<% include ../_header %>
+<% include _docs-nav %>
+
+<nav class="main-nav">
+  <a href="./publish.html">＜ いよいよ公開、その前に</a>
+  <a href="./faq.html">よくある質問 ＞</a>
+</nav>
+
+<h1>うまく作るコツ</h1>
+
+<div class="progressBar-wrapper">
+  <span>進捗バー</span>
+  <div class="progressBar">
+    <div class="progress" style="width: 100%"></div>
+  </div>
+</div>
+
+<p>ここでは、よりよい告知サイトを作るテクニックを紹介します。</p>
+
+<h2>画像のファイルサイズをなるべく軽くする</h2>
+
+<p>画像素材を制作するときは、ファイルサイズが大きくなりすぎないように注意しましょう。特に、Photoshopからpngをそのまま書き出すと重い画像になりがちです。ファイルサイズを軽くする方法はいくつかありますが、<a href="https://tinypng.com/">TinyPNG</a>などのサービスを使うと簡単です。</p>
+<p>なお、Tumblrのファイルアップローダーは多少ファイルサイズ最適化してくれるようですが、個人的にはあまり期待しないほうがいいと思います。やはり、あらかじめファイルサイズを軽くしておくべきでしょう。</p>
+
+<h2 id="how-to-heading-image">見出しに画像を使う</h2>
+<p>「イントロダクション」の見出しは画像に置き換えられます。ただのテキストより一手間かかりますが、より完成度が高まって見えるのでおすすめです。下記の例ではフォントを変更しているだけですが、もちろん画像なので自由度の高い装飾が可能です。</p>
+<figure>
+  <img src="../images/docs/fig-heading-text.png">
+  <figcaption>見出しをテキストで表現した場合（Macでの見え方）</figcaption>
+</figure>
+<figure>
+  <img src="../images/docs/fig-heading-image.png">
+  <figcaption>見出しを画像で表現した場合（一例）</figcaption>
+</figure>
+
+<h2>見出し画像やサークルロゴなどを高解像度で表示する</h2>
+<p><code>Circle Logo Width</code>などサイズを指定できる画像では、あらかじめ2倍の解像度で画像を作っておくと高解像度ディスプレイでも綺麗に表示できます。たとえば幅150pxでサークルロゴを表示したい場合、画像は幅300pxでアップロードし、<code>Circle Logo Width</code>欄に「150」と入力すればOKです。</p>
+<h3>サイズを指定できる画像一覧</h3>
+<ul>
+  <li>サークルロゴ
+  <li>作品タイトル
+  <li>イントロダクション見出し
+</ul>
+<p>※大きい画像を使うときはファイルサイズに気をつけましょう。</p>
+
+<h2 id="how-to-add-tracklist">トラックリスト, スタッフリストを増やしたい</h2>
+
+<p>HTMLを直接編集することで増やせます。難しい場合はHTMLの分かる人を呼んで手伝ってもらってください。</p>
+
+<h3>トラックリストを増やしたい</h3>
+<ol>
+  <li>HTML内に次のようなコードが書いてある場所を探します。
+  <li>増やしたいぶんだけ、該当コードの直下にコピペします。
+  <li>コピペしたコードの、下記の<span style="color:red">10</span>と書いてある場所を<span style="color:red">11</span>などに書き換えます。
+    <ul><li><code>text:05</code>など書かれている部分の数字は整理用の番号なので書き換えなくて大丈夫です。</ul>
+  <li>編集したHTMLをTumblrに反映・保存し、テーマカスタマイズ画面をリロードします。
+  <li>テーマカスタマイズ画面でカスタマイズ項目が増えていたら成功です。
+</ol>
+<p>書き換えるコード1箇所目（HTML上部にあります）</p>
+<pre>
+&lt;meta name=&quot;text:05 l Track<span style="color:red">10</span> Title&quot; content=&quot;&quot; /&gt;
+&lt;meta name=&quot;text:05 l Track<span style="color:red">10</span> Description&quot; content=&quot;&quot; /&gt;
+</pre>
+<p>書き換えるコード2箇所目（HTMLなかごろにあります）</p>
+<pre>
+{block:If05lTrack<span style="color:red">10</span>Title}
+&lt;li class=&quot;track-container&quot;&gt;
+  &lt;div class=&quot;track-number&quot;&gt;<span style="color:red">10</span>&lt;/div&gt;
+  &lt;div class=&quot;track-content&quot;&gt;
+    &lt;span class=&quot;track-title&quot;&gt;{text:05 l Track<span style="color:red">10</span> Title}&lt;/span&gt;
+    &lt;span class=&quot;track-meta&quot;&gt;{text:05 l Track<span style="color:red">10</span> Description}&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/li&gt;
+{/block:If05lTrack<span style="color:red">10</span>Title}
+</pre>
+<p>どちらか片方だけ増やしてもうまくいかないので、必ず2種類のコードをどちらも増やしてください。</p>
+
+<h3>スタッフリストを増やしたい</h3>
+<ol>
+  <li>HTML内に次のようなコードが書いてある場所を探します。
+  <li>増やしたいぶんだけ、該当コードの直下にコピペします。
+  <li>コピペしたコードの、下記の<span style="color:red">06</span>と書いてある場所を<span style="color:red">07</span>などに書き換えます。
+    <ul><li><code>text:07</code>など書かれている部分の数字は整理用の番号なので書き換えなくて大丈夫です。</ul>
+  <li>編集したHTMLをTumblrに反映・保存し、テーマカスタマイズ画面をリロードします。
+  <li>テーマカスタマイズ画面でカスタマイズ項目が増えていたら成功です。
+</ol>
+<p>書き換えるコード1箇所目（HTML上部にあります）</p>
+<pre>
+&lt;meta name=\&quot;text:07 l Staff<span style="color:red">06</span> Name\&quot; content=\&quot;\&quot; /&gt;
+&lt;meta name=\&quot;text:07 l Staff<span style="color:red">06</span> Role\&quot; content=\&quot;\&quot; /&gt;
+&lt;meta name=\&quot;text:07 l Staff<span style="color:red">06</span> URL\&quot; content=\&quot;\&quot; /&gt;
+</pre>
+<p>書き換えるコード2箇所目（HTMLなかごろにあります）</p>
+<pre>
+{block:If07lStaff<span style="color:red">06</span>Name}
+&lt;li&gt;
+  &lt;span class=\&quot;credit-role\&quot;&gt;{text:07 l Staff<span style="color:red">06</span> Role}&lt;/span&gt;
+  &lt;span class=\&quot;credit-title\&quot;&gt;{text:07 l Staff<span style="color:red">06</span> Name}&lt;/span&gt;
+  &lt;span class=\&quot;credit-website\&quot;&gt;
+    &lt;a href=\&quot;{text:07 l Staff<span style="color:red">06</span> URL}\&quot; class=\&quot;credit-website-link btn\&quot;&gt;Website&lt;/a&gt;
+  &lt;/span&gt;
+&lt;/li&gt;
+{/block:If07lStaff<span style="color:red">06</span>Name}
+</pre>
+<p>どちらか片方だけ増やしてもうまくいかないので、必ず2種類のコードをどちらも増やしてください。</p>
+
+<a href="faq.html" class="btn btn-primary btn-full">次のページへすすむ</a>
+
+<% include _docs-footer %>
+<% include ../_footer %>
