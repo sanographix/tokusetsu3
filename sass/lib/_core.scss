@@ -202,12 +202,20 @@ br.touch {
 }
 .section-header {
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     @media #{$mq-sm} {
-        margin-bottom: 4em;
+        margin-bottom: 2em;
     }
     h2 {
         margin: 0;
+    }
+}
+
+.ad {
+    text-align: center;
+    margin: 1em 0;
+    @media #{$mq-sm} {
+        margin-bottom: 2em;
     }
 }
 
@@ -235,12 +243,16 @@ br.touch {
     .intro-sample {
         order: 1;
         overflow: hidden;
-        max-height: 100vw;
+        max-height: 120vw;
+        margin-left: -10px;
+        margin-right: -10px;
         @media #{$mq-sm} {
             position: relative;
             max-height: none;
             overflow: visible;
             max-height: 150vw;
+            margin-left: 0px;
+            margin-right: 0px;
             img {
                 position: absolute;
                 top: 0;
