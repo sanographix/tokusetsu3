@@ -213,9 +213,11 @@ br.touch {
 
 .ad {
     text-align: center;
-    margin: 1em 0;
+    margin: 1em -10px;
     @media #{$mq-sm} {
         margin-bottom: 2em;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
