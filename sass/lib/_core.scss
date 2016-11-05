@@ -288,10 +288,14 @@ br.touch {
     .book-sample {
         max-height: 150vw;
         overflow: hidden;
+        margin-left: -10px;
+        margin-right: -10px;
         @media #{$mq-sm} {
             position: relative;
             max-height: none;
             overflow: visible;
+            margin-left: 0px;
+            margin-right: 0px;
             img {
                 position: absolute;
                 top: 0;
@@ -338,6 +342,33 @@ br.touch {
     }
     .section-header {
         margin-bottom: 0;
+    }
+}
+
+// 導入事例
+.l-case {
+    background-color: $bg-light;
+    .l-row {
+        > div {
+            margin-bottom: 1.5em;
+        }
+        &:last-child > div {
+            margin-bottom: 0;
+        }
+        img {
+            display: block;
+            margin-bottom: .7em;
+            transition: all .2s;
+        }
+        span {
+            display: block;
+            text-align: center;
+            color: $base;
+            font-size: .8rem;
+        }
+        a:hover img {
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+        }
     }
 }
 
