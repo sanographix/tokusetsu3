@@ -3,7 +3,6 @@ body {
     font-family: 'source-han-sans-japanese', sans-serif;
     background: $bg;
     color: $base;
-    -webkit-font-smoothing: antialiased;
     font-size: .9rem;
     line-height: 1.5;
     @media #{$mq-md} {
