@@ -386,6 +386,7 @@ body.is-open {
     padding-top: 30px;
     height: 100%;
     overflow: hidden;
+    text-align: center;
     iframe,
     object,
     embed {
@@ -394,6 +395,17 @@ body.is-open {
         left: 0;
         width: 100%;
         height: 100%;
+    }
+    &#nicovideo-iframe {
+        @media #{$mq-sm} {
+            padding: 0;
+        }
+        iframe {
+            @media #{$mq-sm} {
+                position: static;
+                height: 56.25vw;
+            }
+        }
     }
 }
 
