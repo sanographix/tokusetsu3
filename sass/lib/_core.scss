@@ -10,7 +10,7 @@ body {
     }
 }
 p {
-    line-height: 1.7; 
+    line-height: 1.7;
 }
 .notice {
     color: $light;
@@ -230,15 +230,11 @@ br.touch {
     h2,h3 {
         color: $red;
     }
-    .l-row {
-        display: flex;
-        flex-direction: column;
-        @media #{$mq-sm} {
-            display: block;
-        }
-    }
     .intro-topic {
         order: 2;
+        @media #{$mq-sm} {
+            order: 1;
+        }
     }
     .intro-sample {
         order: 1;
@@ -247,6 +243,7 @@ br.touch {
         margin-left: -10px;
         margin-right: -10px;
         @media #{$mq-sm} {
+            order: 2;
             position: relative;
             max-height: none;
             overflow: visible;
