@@ -156,10 +156,10 @@
   {block:IfNotOgImageImage}
 
   {block:IfNot00lEnableDarkMode}
-  <link rel="stylesheet" href="http://static.tumblr.com/xxf6ewk/50Mopisfb/style-light.css" />
+    <link rel="stylesheet" href="http://static.tumblr.com/xxf6ewk/ynDou3xra/style-light.css" />
   {/block:IfNot00lEnableDarkMode}
   {block:If00lEnableDarkMode}
-  <link rel="stylesheet" href="http://static.tumblr.com/xxf6ewk/Nlbopisfg/style-dark.css" />
+    <link rel="stylesheet" href="http://static.tumblr.com/xxf6ewk/qKTou3xr9/style-dark.css" />
   {/block:If00lEnableDarkMode}
 
   <link rel="shortcut icon" href="{Favicon}">
@@ -573,11 +573,12 @@ style="background-color: {color:Accent};"
 {/block:If04lYoutubeEmbedCode}
 
 {block:If04lNicovideoEmbedCode}
-<section class="l-section section-youtube">
+<section class="l-section section-nicovideo">
   <div class="l-container">
     <div class="section-content">
-      <div id="nicovideo-iframe" class="video-wrap">
-        <script type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/{text:04 l Nicovideo Embed Code}"></script>
+      <div id="nicovideo-player" class="nicovideo-player">
+        <script type="application/javascript" src="http://embed.nicovideo.jp/watch/{text:04 l Nicovideo Embed Code}/script?w=640&h=360"></script>
+        <noscript><a href="http://www.nicovideo.jp/watch/{text:04 l Nicovideo Embed Code}">{text:04 l Nicovideo Embed Code}</a></noscript>
       </div>
     </div>
   </div>
