@@ -80,9 +80,17 @@ br.touch {
     justify-content: space-between;
     align-items: top;
     .globalHeader-logo {
-        a {
+        .globalHeader-logo-title {
             display: inline-block;
-            padding: 1em 1em 1em 0;
+            padding: 1em .5em 1em 0;
+        }
+    }
+    .madeby {
+        display: none;
+        font-size: .8em;
+        font-style: italic;
+        @media #{$mq-sm} {
+            display: inline;
         }
     }
     .globalHeader-nav {
