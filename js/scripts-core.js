@@ -9,25 +9,21 @@
 }());
 
 (function() {
-  if(sampleLen != 0) {
-
-    var sampleLen = document.querySelectorAll('.bookSample-content').length;
-    var sample = [];
-    var lightbox = [];
-
-    for (var i = 0; i < sampleLen; i++) {
-      sample[sample.length] = document.querySelector('.bookSample-content' + CSS.escape(i + 1));
-      lightbox[lightbox.length] = document.querySelector('.bookSample-lightbox' + CSS.escape(i + 1));
-      (function(n) {
-        sample[n].addEventListener("click", function() {
-          lightbox[n].classList.add('is-open');
-          document.body.classList.add('is-open');
-        });
-        lightbox[n].addEventListener("click", function() {
-          this.classList.remove('is-open');
-          document.body.classList.remove('is-open');
-        });
-      })(i);
-    }
-  }
-}());
+  var samples = document.querySelectorAll('.bookSample-content');
+  var lightboxes = document.querySelectorAll('.bookSample-lightbox');
+  if (samples.length < 1) { return false; }
+  Array.prototype.forEach.call(samples, function (sampleElem) {
+    sampleElem.addEventListener('click', function () {
+      var sampleIndex = sampleElem.dataset['index'];
+      var lightbox = document.querySelector('.bookSample-lightbox[data-index="' + sampleIndex + '"]');
+      lightbox.classList.add('is-open');
+      document.body.classList.add('is-open');
+    });
+  });
+  Array.prototype.forEach.call(lightboxes, function (lightboxElem) {
+    lightboxElem.addEventListener('click', function () {
+      lightboxElem.classList.remove('is-open');
+      document.body.classList.remove('is-open');
+    })
+  })
+})();
