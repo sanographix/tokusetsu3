@@ -4,11 +4,11 @@
 <head>
 
   <meta charset="utf-8">
-  <title>いよいよ公開、その前に | Docs - Tokusetsu 3</title>
+  <title>いよいよ公開…の前にすべきこと | Docs - Tokusetsu 3</title>
 
   <meta name="viewport" content="width=device-width">
 
-  <meta property="og:title" content="いよいよ公開、その前に | Docs - Tokusetsu 3" />
+  <meta property="og:title" content="いよいよ公開…の前にすべきこと | Docs - Tokusetsu 3" />
   <meta property="og:description" content="Tokusetsu 3 docs" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sanographix.github.io/tokusetsu3/docs/publish.html" />
@@ -95,7 +95,7 @@
       <li><a href="./" class="">ドキュメント ホーム</a></li>
       <li><a href="./start.html" class="">はじめよう</a></li>
       <li><a href="./customize.html" class="">各項目のカスタマイズ</a></li>
-      <li><a href="./publish.html" class="is-selected">いよいよ公開、その前に</a></li>
+      <li><a href="./publish.html" class="is-selected">いよいよ公開…の前にすべきこと</a></li>
       <li><a href="./tips.html" class="">うまく作るコツ</a></li>
       <li><a href="./faq.html" class="">よくある質問</a></li>
     </ul>
@@ -108,7 +108,7 @@
   <a href="./tips.html">うまく作るコツ ＞</a>
 </nav>
 
-<h1>いよいよ公開、その前に</h1>
+<h1>いよいよ公開…の前にすべきこと</h1>
 
 <div class="progressBar-wrapper">
   <span>進捗バー</span>
@@ -117,18 +117,18 @@
   </div>
 </div>
 
-<p>公開する準備はできましたか？ そのまえに動作確認を必ず行いましょう。</p>
+<p>はやる気持ちを抑えて、動作確認を必ず行いましょう！ 末尾のチェックリストをご活用ください。</p>
+
+<h2>スマートフォンからページを開いて、表示を確認する</h2>
+<p>スマートフォンでページを開き、正しく表示されるか・左右にはみ出している要素はないかチェックしてください。特に<font color="red">詳細設定「デフォルトのモバイルテーマを使用」のチェックは必ずオフにしてください</font>。オンのままだと、せっかく作ったページがスマートフォンで全く表示されません。再度確認しておきましょう。</p>
+<p>なお、PCからブラウザ幅を縮めただけで確認完了とせず、必ずスマートフォン実機で確認してください。（Tumblr側のコードがUserAgentをみて出し分けする仕様であるためです）</p>
 
 <h2>PCからページを開いて、崩れないか確認する</h2>
 <p>ブラウザの横側を掴んで左右にドラッグし、ブラウザ幅を色々なサイズに伸び縮みさせてみましょう。Tokusetsu 3 はどんなブラウザ幅でも綺麗に見えるよう設計されていますが、各画像の構図や各文言の長さによっては、意図せず表示が崩れることがあります。もし特定の幅で崩れる場合、各画像のサイズや構図、各文章の量を調整してください。</p>
 <p>また、<font color="red">Tumblr側の仕様により、ページに広告が表示される場合があるようです</font>。広告はTumblrの設定で無効にできます（2017年4月現在）。</p>
 
-<h2>スマートフォンからページを開いて、表示を確認する</h2>
-<p>スマートフォンでページを開いたときに、意図せず崩れないかチェックしてください。特に<font color="red">「デフォルトのモバイルテーマを使用」の チェックは必ず外してください</font>。外さないとスマートフォンで閲覧できません。再度確認しておきましょう。</p>
-<p>なお、PCからブラウザ幅を縮めただけで確認完了とせず、必ずスマートフォン実機で確認してください。（Tumblr側のコードがUserAgentをみて出し分けする仕様であるためです）</p>
-
 <h2>シェアボタンを押して文言を確認する</h2>
-<p>（シェアボタンを有効にしている場合）ページのヘッダとフッタにあるシェアボタンをそれぞれクリックしてみて、文言に間違いがないか確認しましょう。確認完了したらツイートはせずにウィンドウを閉じてください。</p>
+<p>（TwitterやFacebookシェアボタンを有効にしている場合）ページのヘッダとフッタにあるシェアボタンをそれぞれクリックしてみて、正しく動作するか・シェア文言に間違いがないか確認しましょう。検証の段階ではまだツイートはせずにウィンドウを閉じてください。</p>
 <p>また、FacebookやTwitterの公式に提供されているデバッガーを通すと、シェアされたときの見え方を確認できたり、エラーのチェックができて安心です。下記のデバッガーを利用しましょう。</p>
 <ul>
   <li><a href="https://developers.facebook.com/tools/debug/sharing">Sharing Debugger - 開発者向けFacebook</a>（※開発者登録が必要です）
@@ -136,13 +136,26 @@
 </ul>
 
 <h2>（パスワード認証を使っている場合）パスワードを解除する</h2>
-<p>ブログをパスワード認証で非公開にしていた場合は解除しておきましょう。</p>
+<p>ブログをパスワード認証で非公開にしていた場合は解除しましょう。</p>
 <ul>
-  <li>※パスワード認証を解除してから、Twitterカードが正しく表示されるようになるまで数時間かかるようです。急いでシェアしたい場合は事前にパスワード認証を解除しておきましょう。
+  <li>※パスワード認証を解除してから、Twitterカードが正しく表示されるようになるまで数時間かかるようです。解除後しばらく経ってから<a href="https://cards-dev.twitter.com/validator">Card Validator</a>でTwitterカードが正しく表示されるか確認してください。
 </ul>
 
+<h2>最終チェックリスト</h2>
+<p>あと一息です！ ここまでに挙げた項目をチェックリストにまとめました。</p>
+<aside>
+  <ul class="checklist">
+    <li><input type="checkbox"> <strong>スマートフォンからページを開き、正しく表示されていることを確認した。</strong>
+    <li><input type="checkbox"> <strong>PCのブラウザの横幅を伸び縮みさせて、どの幅でも問題なく表示されることを確認した。</strong>
+    <li><input type="checkbox"> <strong>ページの上部と下部にあるシェアボタンが正しく動作し、シェアされる文言に間違いがないことを確認した。</strong>
+    <li><input type="checkbox"> <strong>パスワード認証を解除した。</strong>
+    <li><input type="checkbox"> <strong><a href="https://developers.facebook.com/tools/debug/sharing">Facebook Debugger</a>、<a href="https://cards-dev.twitter.com/validator">Card Validator</a>でFacebook OGPとTwitterカードが正しく表示されることを確認した。</strong>
+    </ul>
+
+</aside>
+
 <h2>さあ、公開しよう</h2>
-<p>ページに問題がないことを確認したら、いよいよ公開しましょう。TwitterやFacebookなどお好みの方法で告知してください。</p>
+<p>ページに問題がないことを確認したら、いよいよ公開しましょう！ TwitterやFacebookなどお好みの方法で告知してください。</p>
 <p>これでTokusetsu 3のチュートリアルは終了です。お疲れ様でした。</p>
 <p>次ページでは、チュートリアルで書ききれなかったTipsを紹介しますので参考にしてください。</p>
 <a href="tips.html" class="btn btn-primary btn-full">次のページへすすむ</a>
