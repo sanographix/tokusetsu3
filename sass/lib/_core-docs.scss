@@ -266,6 +266,15 @@ pre {
     word-break: break-all;
 }
 
+.checklist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li:not(:first-child) {
+        margin-top: .75em;
+    }
+}
+
 // footer
 .section-footer {
     background-color: $bg-light;
