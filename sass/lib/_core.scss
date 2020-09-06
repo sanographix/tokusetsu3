@@ -332,6 +332,21 @@ br.touch {
     }
 }
 
+// section-aside
+.section-aside {
+    max-width: 728px;
+    border: 1px solid $border;
+    padding: 1.5em;
+    margin: auto;
+    text-align: center;
+    h3 {
+        margin: 0 0 .75em;
+    }
+    p {
+        margin: .75em 0;
+    }
+}
+
 // start
 .section-start {
     background-color: $red;
@@ -383,6 +398,14 @@ br.touch {
                 flex-basis: 33.33333333%;
             }
         }
+    }
+}
+.case-footer {
+    text-align: right;
+    margin-top: 1em;
+    p {
+        font-size: .8em;
+        margin: 0;
     }
 }
 
