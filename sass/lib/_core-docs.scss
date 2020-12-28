@@ -30,12 +30,8 @@ body {
         }
     }
     .madeby {
-        display: none;
         font-size: .8em;
-        font-style: italic;
-        @media #{$mq-sm} {
-            display: inline;
-        }
+        display: inline;
     }
     .globalHeader-nav {
         ul {
