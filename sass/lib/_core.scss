@@ -66,9 +66,7 @@ br.touch {
 
 // global Header
 .l-globalHeader {
-    position: absolute;
-    top: 0;
-    left: 0;
+    margin-bottom: -60px;
     width: 100%;
     color: $bg;
     a {
@@ -84,10 +82,6 @@ br.touch {
             display: inline-block;
             padding: 1em .5em 1em 0;
         }
-    }
-    .madeby {
-        font-size: .8em;
-        display: inline;
     }
     .globalHeader-nav {
         ul {

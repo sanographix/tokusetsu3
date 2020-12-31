@@ -1,0 +1,151 @@
+// header
+.sngr-header {
+    position: relative;
+    z-index: 50;
+    background: $bg;
+    box-shadow: 1px 1px 0 rgba(0,0,0,.08);
+    font-family: -apple-system,BlinkMacSystemFont,"Avenir Next","Segoe UI",Arial,sans-serif;
+    .sngr-header-inner {
+        max-width: 1140px; // ページのwrapperによる
+        height: 56px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media #{$mq-md} {
+            width: 90%;
+        }
+    }
+    .sngr-header-logo {
+        margin: 0;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        @media #{$mq-md} {
+            position: static;
+            width: initial;
+        }
+        a {
+            display: inline-block;
+            margin: auto;
+            padding: 8px;
+            img {
+                display: block;
+                width: 144px;
+                height: 14px;
+                @media #{$mq-md} {
+                    width: 162px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+}
+.sngr-header-navbar {
+    display: none;
+    @media #{$mq-md} {
+        display: flex;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    li {
+        margin: 0;
+        margin: 0 .3rem;
+        letter-spacing: .08em;
+        @media #{$mq-md} {
+            margin: 0 0 0 32px;
+        }
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    a {
+        display: inline-block;
+        padding: 4px 5%;
+        font-size: 14px;
+        line-height: 1.4;
+        text-decoration: none;
+        color: #252525;
+        text-transform: uppercase;
+        &:hover {
+            text-decoration: none;
+            color: #252525;
+            box-shadow: 0px 3px 0 0px #252525;
+        }
+    }
+}
+
+.sngr-header-mobileNav {
+    margin-left: 16px;
+    @media #{$mq-md} {
+        display: none;
+    }
+}
+.sngr-header-mobileNav-content {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    padding-bottom: 8px;
+    box-shadow: 1px 1px 0 rgba(0,0,0,.08);
+    ul {
+        list-style: none;
+        margin: 0 16px;
+        padding: 0;
+        a {
+            display: block;
+            padding: 12px 0;
+            letter-spacing: .08em;
+            font-size: 15px;
+            line-height: 1.4;
+            text-decoration: none;
+            color: #252525;
+            text-transform: uppercase;
+            @media #{$mq-md} {
+                &:hover {
+                    box-shadow: 0px 3px 0 0px #252525;
+                }
+            }
+        }
+    }
+}
+.sngr-header-mobileNav-toggle {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -8px; // アイコンの見かけ上のツラを揃える
+    cursor: pointer;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 0 24 24' width='24'><path d='M0 0h24v24H0z' fill='none'/><path d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'/></svg>") no-repeat center;
+    background-size: 24px 24px;
+    text-indent: 100%;
+    overflow: hidden;
+    color: transparent;
+    @media #{$mq-md} {
+        display: none;
+    }
+    // detailsの▲を消す
+    list-style: none;
+    &::-webkit-details-marker {
+        display: none;
+    }
+}
