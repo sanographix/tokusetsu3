@@ -94,23 +94,39 @@ pageDescription = "Tokusetsu 3 docs";
 </ol>
 <p>書き換えるコード1箇所目（HTML上部にあります）</p>
 <pre>
-&lt;meta name=\&quot;text:07 l Staff<span style="color:red">06</span> Name\&quot; content=\&quot;\&quot; /&gt;
-&lt;meta name=\&quot;text:07 l Staff<span style="color:red">06</span> Role\&quot; content=\&quot;\&quot; /&gt;
-&lt;meta name=\&quot;text:07 l Staff<span style="color:red">06</span> URL\&quot; content=\&quot;\&quot; /&gt;
+&lt;meta name=&quot;text:07 l Staff<span style="color:red">06</span> Name&quot; content=&quot;&quot; /&gt;
+&lt;meta name=&quot;text:07 l Staff<span style="color:red">06</span> Role&quot; content=&quot;&quot; /&gt;
+&lt;meta name=&quot;text:07 l Staff<span style="color:red">06</span> URL&quot; content=&quot;&quot; /&gt;
 </pre>
 <p>書き換えるコード2箇所目（HTMLなかごろにあります）</p>
 <pre>
 {block:If07lStaff<span style="color:red">06</span>Name}
 &lt;li&gt;
-  &lt;span class=\&quot;credit-role\&quot;&gt;{text:07 l Staff<span style="color:red">06</span> Role}&lt;/span&gt;
-  &lt;span class=\&quot;credit-title\&quot;&gt;{text:07 l Staff<span style="color:red">06</span> Name}&lt;/span&gt;
-  &lt;span class=\&quot;credit-website\&quot;&gt;
-    &lt;a href=\&quot;{text:07 l Staff<span style="color:red">06</span> URL}\&quot; class=\&quot;credit-website-link btn\&quot;&gt;Website&lt;/a&gt;
+  &lt;span class=&quot;credit-role&quot;&gt;{text:07 l Staff<span style="color:red">06</span> Role}&lt;/span&gt;
+  &lt;span class=&quot;credit-title&quot;&gt;{text:07 l Staff<span style="color:red">06</span> Name}&lt;/span&gt;
+  &lt;span class=&quot;credit-website&quot;&gt;
+    &lt;a href=&quot;{text:07 l Staff<span style="color:red">06</span> URL}&quot; class=&quot;credit-website-link btn&quot;&gt;Website&lt;/a&gt;
   &lt;/span&gt;
 &lt;/li&gt;
 {/block:If07lStaff<span style="color:red">06</span>Name}
 </pre>
 <p>どちらか片方だけ増やしてもうまくいかないので、必ず2種類のコードをどちらも増やしてください。</p>
+
+<h2 id="how-to-embed-soundcloud-playlist">SoundCloudのプレイリストを埋め込みたい</h2>
+
+<p><a href="./customize.html">カスタマイズ</a>の「Soundcloud Embed Code」で、曲のかわりにプレイリストを埋め込みたい場合、次の手順でテーマのHTMLを編集してください。</p>
+
+<ol>
+  <li>SoundCloudで、埋め込みたいプレイリストの「Share」リンクをクリックします。ウィンドウが開くので、「Embed」タブで埋め込みコードをコピーします。</li>
+  <li>コピーしたコードを編集し、<code>&lt;iframe&gt;~~&lt;/iframe&gt;</code> 部分だけ残し、その後の <code>&lt;div&gt;~~&lt;/div&gt;</code> は削除します。</li>
+  <li>
+    Tumblrの該当サイトの「HTMLを編集」を開き、276行目ごろにある <code>&lt;iframe&gt;~~&lt;/iframe&gt;</code> を 2. のコードと差し替えます。
+    <ul>
+      <li>※ テーマオプションの「04 | Soundcloud Embed Code」は削除せずそのままにしてください。</li>
+    </ul>
+    <p><img src="../images/docs/fig-soundcloud-playlist.jpg" width="700px"></p>
+  </li>
+</ol>
 
 <a href="faq.html" class="btn btn-primary btn-full">次のページへすすむ</a>
 
