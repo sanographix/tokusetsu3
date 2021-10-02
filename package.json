@@ -8,16 +8,25 @@
     "type": "git",
     "url": "https://github.com/sanographix/rin"
   },
+  "browserslist": [
+    "last 2 versions"
+  ],
   "devDependencies": {
-    "browser-sync": "^2.14.2",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-ejs": "^2.2.0",
-    "gulp-imagemin": "^3.0.3",
-    "imagemin-pngquant": "^5.0.0",
-    "gulp-pleeease": "^2.0.2",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^2.3.2",
-    "gulp-uglify": "^2.0.0"
+    "autoprefixer": "^9.6.1",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-ejs": "^4.1.1",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^5.0.0",
+    "imagemin-pngquant": "^6.0.0",
+    "normalize.css": "^8.0.1",
+    "sass": "^1.42.1"
+  },
+  "dependencies": {
+    "gulp-uglify-es": "^2.0.0"
   }
 }
