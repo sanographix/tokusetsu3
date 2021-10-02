@@ -15,7 +15,7 @@ const rename = require('gulp-rename');
 // Sass
 gulp.task('sass', function (done) {
   gulp.src('sass/**/*.scss')
-      .pipe(sass().on('error', sass.logError)) // Keep running gulp even though occurred compile error
+      .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError)) // Keep running gulp even though occurred compile error
       .pipe(postcss([
           autoprefixer({
               cascade: false
