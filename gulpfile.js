@@ -1,42 +1,48 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var pleeease = require('gulp-pleeease');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var imagemin = require('gulp-imagemin');
-var pngquant = require('imagemin-pngquant');
-var browserSync = require('browser-sync');
-var reload      = browserSync.reload;
-var ejs = require("gulp-ejs");
-var plumber = require("gulp-plumber");
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify-es').default;
+const imagemin = require('gulp-imagemin');
+const pngquant = require('imagemin-pngquant');
+const browserSync = require('browser-sync');
+const reload = browserSync.reload;
+const ejs = require('gulp-ejs');
+const plumber = require('gulp-plumber');
+const rename = require('gulp-rename');
 
 // Sass
-
-gulp.task('sass', function () {
-    gulp.src('sass/**/*.scss')
-        .pipe(sass().on('error', sass.logError)) // Keep running gulp even though occurred compile error
-        .pipe(pleeease({
-            autoprefixer: {
-                browsers: ['last 2 versions', 'Android 4.3']
-            }
-        }))
-        .pipe(gulp.dest('build/css'))
-        .pipe(reload({stream:true}));
+gulp.task('sass', function (done) {
+  gulp.src('sass/**/*.scss')
+      .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError)) // Keep running gulp even though occurred compile error
+      .pipe(postcss([
+          autoprefixer({
+              cascade: false
+          })
+      ]))
+      .pipe(gulp.dest('build/css'))
+      .pipe(reload({stream:true}));
+  done();
 });
 
-// Js-concat-uglify
 
-gulp.task('js', function() {
+// Js-concat-uglify
+gulp.task('js', function(done) {
     gulp.src(['js/*.js'])
         .pipe(concat('scripts.js'))
-        .pipe(uglify({preserveComments: 'some'})) // Keep some comments
+        .pipe(uglify({
+            output:{
+                comments: /^!/ // Keep some comments
+            }
+        }))
         .pipe(gulp.dest('build/js'))
         .pipe(reload({stream:true}));
+    done();
 });
 
 // Imagemin
-
-gulp.task('imagemin', function() {
+gulp.task('imagemin', function(done) {
     gulp.src(['images/**/*.{png,jpg,gif,svg}'])
         .pipe(imagemin({
             optimizationLevel: 7,
@@ -46,42 +52,57 @@ gulp.task('imagemin', function() {
             })]
         }))
         .pipe(gulp.dest('build/images'));
+    done();
 });
 
 // ejs
 
 var fs = require('fs');
 var json = JSON.parse(fs.readFileSync("site.json")); // parse json
-gulp.task("ejs", function() {
-    gulp.src(['templates/*.ejs','!' + 'templates/_*.ejs']) // Don't build html which starts from underline
+gulp.task("ejs", function(done) {
+    gulp.src(['templates/**/*.ejs','!' + 'templates/**/_*.ejs']) // Don't build html which starts from underline
         .pipe(plumber())
-        .pipe(ejs(json, {"ext": ".html"}))
+        .pipe(ejs(json))
+        .pipe(rename({
+            extname: '.html'
+        }))
         .pipe(gulp.dest('build'))
+    done();
 });
 
 // Static server
-
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function(done) {
     browserSync({
         server: {
-            baseDir: "build/", //　Target directory
+            baseDir: "build/", // Target directory
             index  : "index.html" // index file
         }
     });
+    done();
+});
+
+/* Watch */
+gulp.task('watch-files', function(done) {
+  gulp.watch('sass/**/*.scss', gulp.task('sass'));
+  gulp.watch('js/**', gulp.task('js'));
+  gulp.watch('images/**', gulp.task('imagemin'));
+  gulp.watch('build/**/*.html', gulp.task('bs-reload'));
+  gulp.watch('templates/**/*.ejs', gulp.task('ejs'));
+  gulp.watch('site.json', gulp.task('ejs'));
+  done();
 });
 
 // Reload all browsers
-
-gulp.task('bs-reload', function () {
+gulp.task('bs-reload', function (done) {
     browserSync.reload();
+    done();
 });
+
+// Build
+gulp.task('build', gulp.series('ejs', gulp.parallel('sass', 'js', 'imagemin')));
 
 // Task for `gulp` command
-
-gulp.task('default',['browser-sync'], function() {
-    gulp.watch('sass/**/*.scss',['sass']);
-    gulp.watch('js/*.js',['js']);
-    gulp.watch('images/**',['imagemin']);
-    gulp.watch("build/*.html", ['bs-reload']);
-    gulp.watch(['templates/*.ejs', 'site.json'], ['ejs']);
-});
+gulp.task('default', gulp.series('browser-sync', 'watch-files', function(done){
+  done();
+  console.log('Default all task done!');
+}));
