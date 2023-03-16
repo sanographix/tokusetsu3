@@ -240,34 +240,55 @@
     display: block;
   }
   .header-banner {
-      padding-bottom: 12%;
+      padding: 50px 0;
       background-repeat: no-repeat;
-      background-color: #373A40;
+      background-color: #454141;
       background-position: center;
       background-size: cover;
+      color: #fff;
+      font-weight: bold;
   }
   @media (min-width: 768px){ .header-banner {
-      padding-bottom: 45px;
-      background-size: 375px 45px;
+    background-size: cover;
   }}
+  .header-banner-inner {
+    margin: 0 30% 0 16px;
+    max-width: 1140px;
+  }
+  @media (min-width: 1200px){ .header-banner-inner {
+    margin: auto;
+  }}
+  .header-banner p {
+    margin: 0 0 16px;
+    font-size: 18px;
+  }
+  .header-banner-btn {
+    display: inline-block;
+    padding: .8rem 1.2rem;
+    border: 1px solid #fff;
+  }
 </style>
 
-<a href="https://kitekure.sanographix.net" class="header-banner-href" target="_blank" rel="noopener">
+<a href="https://tokusetsu4.sanographix.net" class="header-banner-href" target="_blank" rel="noopener">
   <div
-    style="background-image:url('images/header-banner.png');"
+    style="background-image:url('images/header-banner-tokusetsu4.png');"
     class="header-banner"
     >
+    <div class="header-banner-inner">
+      <p>今からはじめるなら、新しいTokusetsu 4をおすすめします。</p>
+      <span class="header-banner-btn">見てみる</span>
+    </div>
   </div>
 </a>
 
 <div class="popup" id="js-popup">
   <div class="popup-inner">
     <div class="close-btn" id="js-close-btn"></div>
-    <a href="https://kitekure.sanographix.net"  target="_blank" rel="noopener"><img src="images/popup-image.jpg" alt="Kitekure" class="popup-thumb"></a>
+    <a href="https://tokusetsu4.sanographix.net"  target="_blank" rel="noopener"><img src="images/popup-image-tokusetsu4.png" alt="tokusetsu4" class="popup-thumb"></a>
     <div class="popup-content">
       <div class="popup-label">NEW TEMPLATE</div>
-      <p>DJ・配信イベント用告知テンプレートが完成。</p>
-      <a href="https://kitekure.sanographix.net"  target="_blank" rel="noopener" class="popup-btn">Show details</a>
+      <p>今からはじめるなら、新しいTokusetsu 4をおすすめします。</p>
+      <a href="https://tokusetsu4.sanographix.net"  target="_blank" rel="noopener" class="popup-btn">見てみる</a>
     </div>
   </div>
   <div class="black-background" id="js-black-bg"></div>
