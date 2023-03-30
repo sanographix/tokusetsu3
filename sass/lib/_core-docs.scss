@@ -11,6 +11,23 @@ body {
     flex-direction: column;
 }
 
+// tokusetsu 4 をおすすめするアナウンスバー
+.announcementBar {
+    padding: 16px 12px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    background: #262455;
+    text-align: center;
+    span {
+        background: linear-gradient(91.43deg, #FF7DBB -1.1%, #FDF995 102.25%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
 // global Header
 .l-globalHeader {
     background-color: $red;
