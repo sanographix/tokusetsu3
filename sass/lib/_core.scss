@@ -64,6 +64,49 @@ br.touch {
     }
 }
 
+// product tabs
+.product-tabs {
+    background: #fff;
+    border-bottom: 1px solid $border;
+    text-align: center;
+}
+.product-tabs-inner {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 0;
+}
+.product-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: .4em;
+    padding: .75em 1.25em;
+    font-size: .85rem;
+    color: $light;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color .2s;
+    &:hover {
+        color: $base;
+    }
+    &--active {
+        color: $base;
+        font-weight: bold;
+        border-bottom-color: $base;
+    }
+}
+.product-tab-badge {
+    display: inline-block;
+    padding: 3px 7px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(-45deg, #7986ff, #ff9d7c);
+    color: #fff;
+    line-height: 1;
+    border-radius: 100px;
+    letter-spacing: .03em;
+}
+
 // global Header
 .l-globalHeader {
     margin-bottom: -60px;
