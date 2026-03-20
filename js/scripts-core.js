@@ -8,30 +8,35 @@
   }
 }());
 
-// Survey Modal
+// CTA Dropdown Panel
 (function() {
-  var overlay = document.getElementById('surveyModalOverlay');
-  if (!overlay) return;
+  var panel = document.getElementById('ctaPanel');
+  if (!panel) return;
 
-  var modalSurvey = document.getElementById('modalSurvey');
-  var modalGetStarted = document.getElementById('modalGetStarted');
+  var panelSurvey = document.getElementById('ctaPanelSurvey');
+  var panelGetStarted = document.getElementById('ctaPanelGetStarted');
   var startBtns = document.querySelectorAll('.start-btn');
   var btnAnswer = document.getElementById('btnAnswerSurvey');
   var btnSkip = document.getElementById('btnSkipSurvey');
 
-  function openModal() {
-    overlay.classList.add('is-active');
+  function openPanel(triggerBtn) {
+    var rect = triggerBtn.getBoundingClientRect();
+    panel.style.top = (rect.bottom + window.scrollY + 8) + 'px';
+    panel.style.left = (rect.left + rect.width / 2) + 'px';
+    panelSurvey.style.display = '';
+    panelGetStarted.style.display = 'none';
+    panel.classList.add('is-active');
   }
 
   function showGetStarted() {
-    modalSurvey.style.display = 'none';
-    modalGetStarted.style.display = 'block';
+    panelSurvey.style.display = 'none';
+    panelGetStarted.style.display = 'block';
   }
 
   for (var i = 0; i < startBtns.length; i++) {
     startBtns[i].addEventListener('click', function(e) {
       e.preventDefault();
-      openModal();
+      openPanel(this);
     });
   }
 
