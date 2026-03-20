@@ -577,3 +577,93 @@ br.touch {
         padding-bottom: 2em;
     }
 }
+
+// Survey Modal
+$modal-purple: #4a1d7b;
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 9000;
+    align-items: center;
+    justify-content: center;
+    &.is-active {
+        display: flex;
+    }
+}
+
+.modal-card {
+    background: $bg;
+    border-radius: 16px;
+    padding: 2em 1.5em;
+    max-width: 420px;
+    width: calc(100% - 2em);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .3);
+}
+
+.modal-text {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.7;
+    margin-bottom: 1.5em;
+    color: $base;
+}
+
+.modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: .75em;
+}
+
+.modal-btn {
+    display: block;
+    width: 100%;
+    padding: .85em 1.5em;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity .2s;
+    box-sizing: border-box;
+    &:hover {
+        opacity: .85;
+    }
+}
+
+.modal-btn-primary {
+    background-color: $modal-purple;
+    color: $bg;
+    border: none;
+}
+
+.modal-btn-secondary {
+    background-color: $bg;
+    color: $base;
+    border: 1px solid $border;
+}
+
+.modal-getstarted {
+    display: none;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.modal-thanks {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1.25em;
+    color: $base;
+}
+
+.modal-btn-getstarted {
+    font-size: 1rem;
+    letter-spacing: .1em;
+}
