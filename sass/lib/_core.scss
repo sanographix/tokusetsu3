@@ -193,6 +193,8 @@ br.touch {
 .btn-wrapper {
     margin: 2em 0 .5em;
     text-align: center;
+    position: relative;
+    display: inline-block;
 }
 .start-btn {
     background-color: $bg;
@@ -583,6 +585,7 @@ br.touch {
 .cta-panel {
     display: none;
     position: absolute;
+    top: calc(100% + 8px);
     left: 50%;
     transform: translateX(-50%);
     background: $bg;
@@ -628,6 +631,7 @@ br.touch {
     &:hover {
         opacity: .85;
         text-decoration: none;
+        color: $red;
     }
 }
 
@@ -650,12 +654,7 @@ br.touch {
 }
 
 .cta-panel-thanks {
-    font-size: 1rem;
-    font-weight: bold;
+    margin-top: 0;
     margin-bottom: 1.25em;
     color: $base;
-}
-
-.cta-panel-btn-getstarted {
-    letter-spacing: .1em;
 }

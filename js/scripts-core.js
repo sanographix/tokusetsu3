@@ -20,9 +20,8 @@
   var btnSkip = document.getElementById('btnSkipSurvey');
 
   function openPanel(triggerBtn) {
-    var rect = triggerBtn.getBoundingClientRect();
-    panel.style.top = (rect.bottom + window.scrollY + 8) + 'px';
-    panel.style.left = (rect.left + rect.width / 2) + 'px';
+    var wrapper = triggerBtn.closest('.btn-wrapper');
+    wrapper.appendChild(panel);
     panelSurvey.style.display = '';
     panelGetStarted.style.display = 'none';
     panel.classList.add('is-active');
