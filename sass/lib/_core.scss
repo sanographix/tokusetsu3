@@ -193,6 +193,8 @@ br.touch {
 .btn-wrapper {
     margin: 2em 0 .5em;
     text-align: center;
+    position: relative;
+    display: inline-block;
 }
 .start-btn {
     background-color: $bg;
@@ -576,4 +578,83 @@ br.touch {
         padding-top: 2em;
         padding-bottom: 2em;
     }
+}
+
+// CTA Dropdown Panel
+
+.cta-panel {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: $bg;
+    border-radius: 16px;
+    padding: 2em 1.5em;
+    width: 320px;
+    max-width: calc(100vw - 2em);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .3);
+    z-index: 9000;
+    box-sizing: border-box;
+    &.is-active {
+        display: block;
+    }
+}
+
+.cta-panel-text {
+    font-size: .95rem;
+    text-align: center;
+    line-height: 1.7;
+    margin-top: 0;
+    margin-bottom: 1.25em;
+    color: $base;
+}
+
+.cta-panel-actions {
+    display: flex;
+    flex-direction: column;
+    gap: .75em;
+}
+
+.cta-panel-btn {
+    display: block;
+    width: 100%;
+    padding: .85em 1.5em;
+    border-radius: 6px;
+    font-size: .95rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity .2s;
+    box-sizing: border-box;
+    &:hover {
+        opacity: .85;
+        text-decoration: none;
+        color: $red;
+    }
+}
+
+.cta-panel-btn-primary {
+    background-color: transparent;
+    color: $red;
+    border: 1px solid $red;
+}
+
+.cta-panel-btn-secondary {
+    background-color: $bg;
+    color: $base;
+    border: 1px solid $border;
+}
+
+.cta-panel-getstarted {
+    display: none;
+    text-align: center;
+    padding: .5em 0;
+}
+
+.cta-panel-thanks {
+    margin-top: 0;
+    margin-bottom: 1.25em;
+    color: $base;
 }
