@@ -1,8 +1,6 @@
-@import 'https://fonts.googleapis.com/css?family=Noto+Sans';
-
 // Core (Main Style)
 body {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     background: $bg;
     color: $base;
     line-height: 1.6;
@@ -30,10 +28,10 @@ body {
 
 // global Header
 .l-globalHeader {
-    background-color: $red;
-    color: $bg;
+    background-color: $bg;
+    color: $base;
     a {
-        color: $bg;
+        color: $base;
     }
 }
 .globalHeader-container {

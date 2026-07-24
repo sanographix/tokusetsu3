@@ -1,6 +1,6 @@
 // Core (Main Style)
 body {
-    font-family: 'source-han-sans-japanese', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     background: $bg;
     color: $base;
     font-size: .9rem;
@@ -66,20 +66,24 @@ br.touch {
 
 // product tabs
 .product-tabs {
+    position: sticky;
+    top: 0;
+    z-index: 10;
     background: #fff;
     border-bottom: 1px solid $border;
     text-align: center;
+    padding-block: 8px;
 }
 .product-tabs-inner {
     display: inline-flex;
     align-items: flex-end;
-    gap: 0;
+    gap: 4px;
 }
 .product-tab {
     display: inline-flex;
     align-items: center;
     gap: .4em;
-    padding: .75em 1.25em;
+    padding: .5em .75em;
     font-size: .85rem;
     color: $light;
     text-decoration: none;
@@ -96,7 +100,7 @@ br.touch {
 }
 .product-tab-badge {
     display: inline-block;
-    padding: 3px 7px;
+    padding: 3px 5px;
     font-size: 10px;
     font-weight: bold;
     text-transform: uppercase;
@@ -372,7 +376,6 @@ br.touch {
 // section-aside
 .section-aside {
     max-width: 728px;
-    border: 1px solid $border;
     padding: 1.5em;
     margin: auto;
     text-align: center;
