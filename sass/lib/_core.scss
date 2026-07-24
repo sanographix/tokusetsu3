@@ -1,6 +1,6 @@
 // Core (Main Style)
 body {
-    font-family: 'source-han-sans-japanese', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     background: $bg;
     color: $base;
     font-size: .9rem;
@@ -372,7 +372,6 @@ br.touch {
 // section-aside
 .section-aside {
     max-width: 728px;
-    border: 1px solid $border;
     padding: 1.5em;
     margin: auto;
     text-align: center;
