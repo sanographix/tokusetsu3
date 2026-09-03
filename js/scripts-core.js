@@ -8,3 +8,43 @@
   }
 }());
 
+
+// CTA Dropdown Panel
+(function() {
+  var panel = document.getElementById('ctaPanel');
+  if (!panel) return;
+
+  var panelSurvey = document.getElementById('ctaPanelSurvey');
+  var panelGetStarted = document.getElementById('ctaPanelGetStarted');
+  var startBtns = document.querySelectorAll('.start-btn');
+  var btnAnswer = document.getElementById('btnAnswerSurvey');
+  var btnSkip = document.getElementById('btnSkipSurvey');
+
+  function openPanel(triggerBtn) {
+    var wrapper = triggerBtn.closest('.btn-wrapper');
+    wrapper.appendChild(panel);
+    panelSurvey.style.display = '';
+    panelGetStarted.style.display = 'none';
+    panel.classList.add('is-active');
+  }
+
+  function showGetStarted() {
+    panelSurvey.style.display = 'none';
+    panelGetStarted.style.display = 'block';
+  }
+
+  for (var i = 0; i < startBtns.length; i++) {
+    startBtns[i].addEventListener('click', function(e) {
+      e.preventDefault();
+      openPanel(this);
+    });
+  }
+
+  btnAnswer.addEventListener('click', function() {
+    showGetStarted();
+  });
+
+  btnSkip.addEventListener('click', function() {
+    showGetStarted();
+  });
+}());
