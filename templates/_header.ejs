@@ -111,17 +111,21 @@
         </nav>
       </div>
     </header>
-
-    <nav class="product-tabs">
-      <div class="product-tabs-inner">
-        <a href="<%= siteRootUrl %>" class="product-tab product-tab--active">Tokusetsu 3</a>
-        <a href="https://tokusetsu4.sanographix.net/" class="product-tab" target="_blank" rel="noopener">
-          Tokusetsu 4<span class="product-tab-badge">NEW</span>
-        </a>
-      </div>
-    </nav>
+    <div class="tokusetsuNavbar">
+      <nav class="product-tabs">
+        <div class="product-tabs-inner">
+          <a href="<%= siteRootUrl %>" class="product-tab product-tab--active">Tokusetsu 3</a>
+          <a href="https://tokusetsu4.sanographix.net/" class="product-tab" target="_blank" rel="noopener">
+            Tokusetsu 4
+          </a>
+          <a href="https://tokusetsu5.sanographix.net/" class="product-tab" target="_blank" rel="noopener">
+            Tokusetsu 5<span class="product-tab-badge">NEW</span>
+          </a>
+        </div>
+      </nav>
+      <% include _announcementBar %>
+    </div>
   <% } %>
-
 
   <div class="l-globalHeader">
     <div class="l-container">
@@ -142,5 +146,5 @@
     </div>
   </div>
   <% if (pageId != 'index') { %>
-    <a class="announcementBar" href="https://tokusetsu4.sanographix.net/"><span>これから使い始めるなら、新しいバージョンの「Tokusetsu 4」をおすすめします。 👉</span></a>
+    <% include _announcementBar %>
   <% } %>

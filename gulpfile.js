@@ -43,7 +43,7 @@ gulp.task('js', function(done) {
 
 // Imagemin
 gulp.task('imagemin', function(done) {
-    gulp.src(['images/**/*.{png,jpg,gif,svg}'])
+    gulp.src(['images/**/*.{png,jpg,gif,svg,webp}'])
         .pipe(imagemin({
             optimizationLevel: 7,
             use: [pngquant({
