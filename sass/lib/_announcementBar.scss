@@ -1,7 +1,7 @@
 // tokusetsu 5 をおすすめするアナウンスバー
 .announcementBar {
-    background: linear-gradient(-45deg, #95E3DE, #87EDBF);
-    color: #384f77;
+    background: linear-gradient(-45deg, #d4f3f0, #c0f1d3);
+    color: #1F5A4F;
     text-align: center;
     height: 64px;
     display: flex;
@@ -10,7 +10,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #1F5A4F;
     @media #{$mq-md} {
         font-size: 16px;
         gap: 8px;
