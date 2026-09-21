@@ -203,6 +203,14 @@ aside.info {
     border-left: 3px solid #1371d7;
     background: #eef3fa;
 }
+iframe[src*="youtube.com/embed"] {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin-top: 1em;
+}
 code {
     border: 1px solid $border;
     border-radius: 3px;
