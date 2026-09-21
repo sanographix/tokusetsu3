@@ -179,27 +179,29 @@ h2 {
 }
 aside {
     margin: 1.5em auto;
-    border: 1px solid $border;
     padding: 1em;
+    border-radius: 6px;
+    background: #f4f5f6;
     > h3,h4,h5 {
         margin-top: 0;
     }
-}
-aside.caution {
-    border-left: 5px solid #ce4844;
-    h3 {
-        color: #ce4844;
+    > h3 {
+        font-size: 1.1rem;
     }
-}
-aside.info {
-    border-left: 5px solid #2f6fc0;
-    background: #f3f8fe;
-    h3 {
-        color: #2f6fc0;
+    p:first-child {
+        margin-top: 0;
     }
     > :last-child {
         margin-bottom: 0;
     }
+}
+aside.caution {
+    border-left: 3px solid #fe9a00;
+    background: #fff5ec;
+}
+aside.info {
+    border-left: 3px solid #1371d7;
+    background: #eef3fa;
 }
 code {
     border: 1px solid $border;
